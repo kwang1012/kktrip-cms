@@ -1,0 +1,4506 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "KK Trip",
+    "description": "Published posts migrated from FlareCMS"
+  },
+  "settings": {
+    "title": "KK Trip",
+    "tagline": "Travel stories and product updates",
+    "timezone": "America/Chicago"
+  },
+  "collections": [
+    {
+      "slug": "posts",
+      "label": "Posts",
+      "labelSingular": "Post",
+      "urlPattern": "/posts/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "scheduling",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Excerpt",
+          "type": "text"
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured image",
+          "type": "image"
+        },
+        {
+          "slug": "author_display",
+          "label": "Author",
+          "type": "string"
+        },
+        {
+          "slug": "tags",
+          "label": "Tags (comma separated)",
+          "type": "string"
+        },
+        {
+          "slug": "original_published_at",
+          "label": "Publication date",
+          "type": "datetime"
+        },
+        {
+          "slug": "original_updated_at",
+          "label": "Original update date",
+          "type": "datetime"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "posts": [
+      {
+        "id": "3c309915-3bb6-4915-98a3-e20a2516dc74",
+        "slug": "kk-trip-now-on-app-store",
+        "status": "published",
+        "data": {
+          "title": "KK Trip 正式在 App Store 上架了！一起旅行，終於不用再整理到崩潰😎",
+          "excerpt": "排行程不用再翻聊天紀錄、找訂房信、問「現在到底是哪一版？」✈️ 用 KK Trip 讓 AI 幫你起個頭，再和旅伴一起把行程、預訂和待辦通通整理好。",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "key-2-wkpuy",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-1-5q48q",
+                  "text": "一起旅行很好玩。一起「規劃」旅行，就不一定了。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-4-koi8h",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-3-v9n5b",
+                  "text": "「欸我丟的那家燒肉你有加嗎？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-6-9ucxz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-5-yle1v",
+                  "text": "「飯店到底訂哪間？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-8-6nbks",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-7-3q0zv",
+                  "text": "「等等，我以為第三天是去環球？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-10-onc51",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-9-uv1cw",
+                  "text": "「機票資訊誰有？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-12-5e65k",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-11-3tf8x",
+                  "text": "「那個 Airbnb 是不是有人傳過？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-14-hgi49",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-13-ciakh",
+                  "text": "「……所以現在到底要看哪一版行程？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-16-x42hc",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-15-akvvp",
+                  "text": "如果你對以上任何一句有既視感——"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-18-9s0e4",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-17-1ncfj",
+                  "text": "KK Trip 就是為了這些時刻做的。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-20-rmf31",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-19-p0ruf",
+                  "text": "現在 KK Trip 正式在 App Store 上架啦！🥳"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-22-q2mkp",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-21-zqi5j",
+                  "text": "你可以直接在 iPhone 上建立一趟旅行，讓 AI 幫忙排行程、找靈感，再邀請旅伴一起修改和討論。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-24-gn1io",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-23-uxx8t",
+                  "text": "景點、每天的安排、住宿預訂、行前待辦……通通放進同一趟旅行裡。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-26-5m4am",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-25-7rlce",
+                  "text": "不用再一邊翻 LINE、一邊找 Gmail、一邊問："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-28-l8z0n",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-27-cwq6a",
+                  "text": "「欸，我們最後到底決定什麼？」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-30-4rls5",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-29-96a0d",
+                  "text": "💬 先跟 KK Trip 說：你想怎麼玩？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-32-owwzk",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-31-fnz1b",
+                  "text": "不用先研究三天三夜才能開始排行程。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-34-gafhz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-33-02vmc",
+                  "text": "你可以直接告訴 AI："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-36-hk06d",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-35-m1kz7",
+                  "text": "「和爸媽去大阪五天，想吃很多美食，但不要走太多路，每天下午最好可以休息一下。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-38-hhq5l",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-37-ivokn",
+                  "text": "或是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-40-xj8q3",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-39-gyyik",
+                  "text": "「四個朋友去東京六天，第一次去，想逛街、吃燒肉、看夜景，行程不要太鬆。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-42-dr9xi",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-41-m7p04",
+                  "text": "目的地、天數、旅伴、預算、旅行節奏……想到什麼就說什麼。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-44-mqi3i",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-43-kvnz4",
+                  "text": "KK Trip 會先幫你把散落的想法整理起來，找出適合的景點，再排成一份可以繼續修改的行程草稿。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-46-f69xz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-45-ognp0",
+                  "text": "不是 AI 說去哪就去哪。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-48-ojcog",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-47-8md3r",
+                  "text": "不喜歡？換掉。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-50-zwqhn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-49-jhs6w",
+                  "text": "太趕？往後挪。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-52-0ag5j",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-51-n995s",
+                  "text": "突然看到一家超想吃的店？塞進去。🍜"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-55-v2ple",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-53-juxhz",
+                  "text": "AI 負責幫你少做一點功課，"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-54-3qtx5",
+                  "text": "最後這趟旅行還是你們的。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-57-rzkji",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-56-slzmy",
+                  "text": "👯 然後，把那群意見很多的旅伴抓進來"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-59-i6tdo",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-58-2qf41",
+                  "text": "一個人排行程已經很累。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-61-rntc9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-60-hybdp",
+                  "text": "四個人一起排行程，就是另一個故事了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-63-axmgn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-62-g6jp5",
+                  "text": "所以 KK Trip 可以直接邀請旅伴加入同一趟旅行。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-65-klca2",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-64-nz4rz",
+                  "text": "大家一起看同一份行程、一起改，也可以直接在旅行裡討論："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-67-d8y08",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-66-bfcud",
+                  "text": "「這家我超想去！」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-69-yztmp",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-68-d6fmb",
+                  "text": "「第三天是不是太滿？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-71-1g30g",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-70-aqsd8",
+                  "text": "「這附近還有一間咖啡廳！」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-73-sm8ri",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-72-nqobi",
+                  "text": "「拜託不要早上八點出門 😭」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-75-mfquo",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-74-1onh8",
+                  "text": "需要一起規劃的人，就給他編輯權限；只想負責跟著走的人，也可以設成僅檢視。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-77-yacj9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-76-6h8nv",
+                  "text": "少一點截圖來截圖去，多一點真的把旅行排完。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-79-1064a",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-78-v5ojm",
+                  "text": "🧳 不只排行程，出發前那些雜事也一起收好"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-81-h2jv5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-80-c2l7o",
+                  "text": "旅行最容易忘記的，通常不是景點。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-83-cd4mj",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-82-d58po",
+                  "text": "而是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-85-ed9ah",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-84-rscy8",
+                  "text": "☐ 機場到飯店的車票買了嗎？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-87-al61q",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-86-tptai",
+                  "text": "☐ 飯店幾點可以 Check-in？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-89-mv0r3",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-88-o7qc3",
+                  "text": "☐ 日本轉接頭誰要帶？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-91-3j1gf",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-90-46zox",
+                  "text": "☐ 那間餐廳到底有沒有訂位？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-93-5hjuc",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-92-c8ah9",
+                  "text": "☐ 環球影城的票放在哪？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-95-gq67c",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-94-9hyvr",
+                  "text": "☐ ……等等，我們旅平險買了嗎？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-97-035p1",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-96-d5gi1",
+                  "text": "所以 KK Trip 不只放行程。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-99-u99aa",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-98-r1giw",
+                  "text": "住宿和其他預訂資料可以一起整理進旅行裡，也可以建立行前待辦，把「記得要做」的事情一個個打勾。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-101-gcn2s",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-100-eld2w",
+                  "text": "從「我們想去哪」，一路整理到："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-104-u3bze",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-102-l7vlz",
+                  "text": "「好，可以出發了。」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-103-4ycja",
+                  "text": " ✈️"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-106-zb1st",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-105-bw792",
+                  "text": "📍真的出國了？KK Trip 還是跟著你"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-108-zh8o4",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-107-9suhf",
+                  "text": "行程當然不可能永遠照表操課。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-110-w6hqx",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-109-i8go7",
+                  "text": "睡過頭了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-112-9w18s",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-111-cei1n",
+                  "text": "下雨了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-114-ztdtu",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-113-wf0u2",
+                  "text": "逛街逛太久了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-116-xzgwg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-115-tw2uz",
+                  "text": "爸媽累了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-118-m1s9l",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-117-z8min",
+                  "text": "昨天走了兩萬步，今天誰都不想動了。🫠"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-120-jxu3t",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-119-lnyqw",
+                  "text": "沒關係。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-122-s3kpa",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-121-7905o",
+                  "text": "你可以直接調整當天行程，也可以跟 AI 說："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-124-6vabl",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-123-uib0k",
+                  "text": "「今天下午想輕鬆一點。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-126-z896x",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-125-o5c5f",
+                  "text": "再重新看看今天怎麼安排比較適合。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-128-8s1dz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-127-a2yg5",
+                  "text": "手機也會保留已經載入的部分旅行資料，所以遇到網路不穩時，還是可以查看先前載入的內容。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-132-qvpyw",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-129-p8g0p",
+                  "text": "小提醒："
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-130-jm7vs",
+                  "text": "出發前記得先打開重要資料！",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-131-0hzix",
+                  "text": " AI、多人的即時同步仍然需要網路，離線看到的內容也可能不是最新版本。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-134-gxgnf",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-133-yck76",
+                  "text": "🤖 AI 可以幫忙，但它不是你的導遊本人"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-136-3kdmn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-135-k6jbs",
+                  "text": "最後還是要認真提醒一下："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-139-khxpz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-137-5i9i4",
+                  "text": "AI 很適合幫你找靈感、整理資訊、快速做出第一版行程，但景點營業時間、交通班次、票券規則和預訂狀態，"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-138-59rft",
+                  "text": "還是要以官方最新資訊為準。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-141-d2vsu",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-140-vl1yy",
+                  "text": "如果 AI 排出「10:00 淺草 → 10:30 澀谷 → 11:00 河口湖」這種瞬間移動行程……"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-143-66zkw",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-142-qpd2l",
+                  "text": "請不要挑戰東京的交通系統。😂"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-145-a20pi",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-144-z1hy0",
+                  "text": "旅行不是在解最佳化問題。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-147-s3ye2",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-146-visxv",
+                  "text": "留一點空白、留一點迷路的時間，也留一點「欸這家店看起來不錯，我們進去看看」的空間。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-149-wqxbj",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-148-d38fb",
+                  "text": "🎒 下一趟旅行，要不要一起試試？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-151-hbm0v",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-150-0szmh",
+                  "text": "如果你最近剛好在規劃："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-153-nt9tl",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-152-qn3i9",
+                  "text": "👫 跟朋友第一次出國"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-155-r7q1j",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-154-57xgj",
+                  "text": "👨‍👩‍👧 帶家人一起旅行"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-157-h4zs4",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-156-jzvdv",
+                  "text": "💑 兩個人排行程排到快吵架"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-159-vcbax",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-158-3njn1",
+                  "text": "👥 一群人開了群組兩個月，至今只決定了國家"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-161-vg16v",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-160-ysuug",
+                  "text": "那就來試試 KK Trip 吧。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-163-c3t8g",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-162-626dv",
+                  "text": "建立一趟旅行 → 讓 AI 幫你起個頭 → 把旅伴抓進來。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-165-duj4m",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-164-6h6yg",
+                  "text": "剩下的，我們一起慢慢把它變成一趟真的會出發的旅行。🌏"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-168-fvz0p",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-167-mr7rf",
+                  "text": "在 App Store 下載 KK Trip",
+                  "marks": [
+                    "key-166-9j8ni"
+                  ]
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-166-9j8ni",
+                  "href": "https://apps.apple.com/us/app/kk-trip-ai-%E6%97%85%E8%A1%8C%E8%A6%8F%E5%8A%83/id6817090176",
+                  "blank": true
+                }
+              ]
+            },
+            {
+              "_type": "image",
+              "_key": "key-169-jlbl2",
+              "asset": {
+                "_type": "reference",
+                "_ref": "/migrated-media/6be9df4b571c9bff28d214d9.jpg",
+                "url": "/migrated-media/6be9df4b571c9bff28d214d9.jpg"
+              }
+            },
+            {
+              "_type": "block",
+              "_key": "key-172-o9dfn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-170-0i1yl",
+                  "text": "KK Trip — 一起排行程，也一起把旅行成真。",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-171-kipe6",
+                  "text": " ✈️"
+                }
+              ]
+            }
+          ],
+          "featured_image": {
+            "$media": {
+              "url": "https://cms.kktrip.app/files/uploads/cab07be1-0722-47cb-9c86-c668b2c47f1e.png",
+              "alt": "KK Trip 正式在 App Store 上架了！一起旅行，終於不用再整理到崩潰😎"
+            }
+          },
+          "author_display": "KK Trip",
+          "tags": "新聞, 公告",
+          "original_published_at": "2026-10-05T13:32:00.000Z",
+          "original_updated_at": "2026-10-05T14:03:25.295Z"
+        }
+      },
+      {
+        "id": "a3107045-8091-4cec-b5b3-84f1b67ea2c9",
+        "slug": "why-kk-trip",
+        "status": "published",
+        "data": {
+          "title": "KK Trip、Mindtrip、去趣怎麼選？從你怎麼排行程開始",
+          "excerpt": "AI 旅行規劃工具這麼多，到底該選哪個？如果你想讓 AI 幫忙排行程，再和旅伴一起把旅行準備好，來看看 KK Trip、Mindtrip 和去趣 chicTrip 的規劃方式有什麼不同。",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "key-2-q6384",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-1-mfarc",
+                  "text": "打開 AI 旅行工具，你可能很快就會遇到一個問題："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-4-xn4vd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-3-s7hjw",
+                  "text": "大家好像都會排行程，那到底差在哪？",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-6-3n2en",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-5-e6j37",
+                  "text": "其實差別不只在「AI 會不會推薦景點」，而是——"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-8-q6v0w",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-7-fk6cv",
+                  "text": "你通常怎麼開始一趟旅行？",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-10-15lwi",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-9-7h740",
+                  "text": "有人從 Instagram 看到一家店開始，一路收藏十幾個景點；有人喜歡看別人的行程，再慢慢拼出自己的版本。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-12-gw7if",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-11-bn7qa",
+                  "text": "也有人腦中一開始只有："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-14-19p9o",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-13-ukhrk",
+                  "text": "「想帶爸媽去大阪五天，不要走太多路，想吃好吃的，每天下午最好可以休息一下。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-16-bvetd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-15-cnve4",
+                  "text": "如果你比較像最後一種，KK Trip 就是我們特別想做好的使用方式。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-20-36wkk",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-17-nueti",
+                  "text": "你先告訴 AI "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-18-amxcq",
+                  "text": "這趟旅行是誰要去、想怎麼玩、有什麼限制",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-19-dvyl9",
+                  "text": "，一起做出第一版行程；接著再邀請旅伴加入，把大家想去的地方、訂好的住宿和出發前要做的事，慢慢整理進同一趟旅行。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-22-lsx82",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-21-jjr16",
+                  "text": "不是產生一份 AI 行程就結束。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-24-45w9a",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-23-up1zb",
+                  "text": "從「我們要去哪？」到「行李收好了嗎？」都留在同一趟旅行裡。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-27-8s21f",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-26-81e4x",
+                  "text": "在 App Store 下載 KK Trip，開始規劃下一趟旅行",
+                  "marks": [
+                    "key-25-nowe2"
+                  ]
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-25-nowe2",
+                  "href": "https://apps.apple.com/us/app/kk-trip-ai-%E6%97%85%E8%A1%8C%E8%A6%8F%E5%8A%83/id6817090176",
+                  "blank": true
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-29-hcx9r",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-28-r5hns",
+                  "text": "KK Trip 想解決的，其實是 AI 排完之後的事"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-31-c5oqi",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-30-pmzor",
+                  "text": "假設你真的要帶爸媽去大阪五天。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-33-gsgho",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-32-hpdaz",
+                  "text": "你的需求可能不是單純："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-35-shlii",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-34-m4khn",
+                  "text": "「幫我排大阪五日遊。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-37-s01tx",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-36-wd0r0",
+                  "text": "而是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-39-wl91i",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-38-g2i3q",
+                  "text": "「帶爸媽去大阪五天，想吃美食、逛街，也想去大阪城。不要走太多路，每天下午留一點休息時間。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-41-5o8r8",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-40-kgohg",
+                  "text": "KK Trip 會先從這些條件出發，協助找景點、安排每天的時間，再讓你繼續修改。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-43-90n96",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-42-j8880",
+                  "text": "但真正的旅行規劃通常才剛開始。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-45-w7620",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-44-6pv2n",
+                  "text": "朋友傳來一家「一定要吃」的燒肉店。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-47-rpg6f",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-46-zbinr",
+                  "text": "媽媽覺得第三天排太滿。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-49-9q7tg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-48-9rc4n",
+                  "text": "飯店終於訂好了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-51-dcpf5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-50-dc9uw",
+                  "text": "機場交通還沒買。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-53-tgi1n",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-52-su40m",
+                  "text": "有人突然問：「所以環球影城到底哪一天？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-55-du8y2",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-54-bzs47",
+                  "text": "這些事情很難靠一張 AI 產生的行程表解決。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-57-7d8f1",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-56-umx9d",
+                  "text": "所以在 KK Trip 裡，旅伴可以一起查看和修改行程、討論安排；住宿和其他預訂可以整理進旅行；出發前還沒完成的事情，也可以放進待辦。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-59-bx3ca",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-58-5t4qm",
+                  "text": "到了大阪發現下雨、走累了，原本的計畫不想照著跑？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-61-rkhz9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-60-m86k5",
+                  "text": "繼續改就好。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-63-wshnh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-62-27b0p",
+                  "text": "我們想做的不是「幫你生成一份漂亮的五日遊」，而是讓這份計畫真的可以一路用到旅行結束。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-65-l4g4i",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-64-8enpa",
+                  "text": "那 Mindtrip 和去趣呢？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-67-od0wf",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-66-hdazl",
+                  "text": "如果只看功能表，其實三款產品會看到不少相似的東西："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-69-45i92",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-68-fpecb",
+                  "text": "AI、景點、地圖、行程、共同規劃……"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-72-8jd5r",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-70-84zfh",
+                  "text": "但真正用起來，"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-71-3w9gm",
+                  "text": "它們帶你進入旅行規劃的方式不太一樣。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-74-fu53h",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-73-5xvab",
+                  "text": "與其問「哪一個功能最多」，不如先問："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-76-y7u5p",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-75-x2xs9",
+                  "text": "你平常是怎麼開始排行程的？",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-78-rtneq",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-77-t9mpd",
+                  "text": "Mindtrip：看到靈感，就把它變成一趟旅行"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-80-qxurg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-79-fbqys",
+                  "text": "如果你排行程的起點常常是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-82-0mldq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-81-pzt9q",
+                  "text": "「欸，這支影片裡的飯店好漂亮。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-84-9mklf",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-83-456lp",
+                  "text": "「這篇東京攻略先存起來。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-86-g1viw",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-85-rge32",
+                  "text": "「朋友傳的 Google Maps 清單感覺不錯。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-88-qndez",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-87-vxe9w",
+                  "text": "那 Mindtrip 的方向會很有吸引力。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-90-l5cji",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-89-ibjgi",
+                  "text": "Mindtrip 的 Start Anywhere 可以從文章、影片、照片或 Google Maps 等內容開始，把看到的旅行靈感帶進探索與規劃流程。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-92-tjbbd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-91-y8chw",
+                  "text": "接著可以繼續找推薦、看互動地圖，也提供住宿、航班、餐廳和體驗等預訂入口。共同編輯、群組聊天和預訂整理也都包含在它的旅行規劃體驗裡。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-94-vv63y",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-93-82058",
+                  "text": "簡單來說，如果你的旅行通常是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-96-qksqq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-95-uh41a",
+                  "text": "「這個好像很讚」→「那個也想去」→「好，把這些東西變成一趟旅行」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-98-jnrkl",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-97-5it6r",
+                  "text": "Mindtrip 很值得看看。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-100-tc92e",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-99-mn03k",
+                  "text": "KK Trip 的起點則稍微不同。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-102-lmsyz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-101-9lmre",
+                  "text": "我們更想從："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-104-92wjf",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-103-oqve3",
+                  "text": "「這趟旅行，我們想怎麼玩？」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-106-u0neq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-105-qfgwg",
+                  "text": "開始。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-108-25k56",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-107-xj3dh",
+                  "text": "去趣 chicTrip：我已經存了一堆景點，幫我排順一點"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-110-o1pg0",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-109-qcz5m",
+                  "text": "另一種很常見的旅行規劃方式是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-112-qopkl",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-111-xl6fo",
+                  "text": "Google Maps 15 顆星。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-114-n62dn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-113-95ikd",
+                  "text": "Instagram 收藏 8 家店。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-116-si42h",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-115-t8nfj",
+                  "text": "朋友又傳來 3 個景點。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-118-40iw4",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-117-a5m43",
+                  "text": "然後看著它們想："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-120-qd0yb",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-119-af450",
+                  "text": "「好，所以這些到底要怎麼排？」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-122-gn9tc",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-121-1yebr",
+                  "text": "去趣 chicTrip 很貼近這種使用情境。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-124-j0xwg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-123-8td9o",
+                  "text": "去趣把旅人分享的行程、景點和影音內容放進探索體驗裡。看到喜歡的地方可以收藏、加入行程，再透過 AI 排序整理路線。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-126-m1wq3",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-125-rklpf",
+                  "text": "另外也有共同記帳、行李清單、日本優惠券和 eSIM 等偏向旅行實用工具的功能。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-128-j3cbz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-127-hfidg",
+                  "text": "所以如果你的起點是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-130-fxv7a",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-129-pg65u",
+                  "text": "「我大概知道想去哪，只需要把這些地方整理成一趟順路的旅行。」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-132-ty3ix",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-131-huwp7",
+                  "text": "去趣會是很自然的選擇。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-134-zvz4i",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-133-u2z94",
+                  "text": "KK Trip 則更適合在景點清單出現之前，就先把："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-136-or833",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-135-si42r",
+                  "text": "誰要去、玩幾天、想玩多累、有哪些限制",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-138-d9lhm",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-137-kjx6a",
+                  "text": "一起交給 AI 考慮。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-140-j837t",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-139-c12cb",
+                  "text": "所以，我適合哪一個？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-142-36qfx",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-141-9kzh9",
+                  "text": "可以用一個很簡單的方法想："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-144-z32an",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-143-wllon",
+                  "text": "如果你的起點是「我看到好多想去的東西」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-147-cimvd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-145-iljpt",
+                  "text": "→ 看看 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-146-7f6fs",
+                  "text": "Mindtrip",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-149-xdpen",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-148-bei8v",
+                  "text": "如果你的起點是「我已經存了一堆景點，幫我排順」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-152-9lghz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-150-jj5n2",
+                  "text": "→ 看看 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-151-q0kue",
+                  "text": "去趣 chicTrip",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-154-6tjs0",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-153-t2lxa",
+                  "text": "如果你的起點是「我們要去旅行了，幫我們把整趟旅行規劃起來」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-157-w1g8r",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-155-fu2rp",
+                  "text": "→ 試試 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-156-pdmh5",
+                  "text": "KK Trip",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-159-80ia9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-158-mjky6",
+                  "text": "當然，三者的功能並不是完全切開的。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-161-95hnk",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-160-6g172",
+                  "text": "Mindtrip 也能共同規劃，去趣也有 AI，KK Trip 也能收藏景點。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-164-xcxmi",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-162-hrf19",
+                  "text": "差異更多是在於："
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-163-a9f66",
+                  "text": "哪一種流程最接近你原本就想做的事。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-166-n2uc8",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-165-fo00h",
+                  "text": "我們為什麼會做 KK Trip？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-168-v70d5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-167-6dmcm",
+                  "text": "因為一趟旅行最麻煩的時候，往往不是「不知道大阪有什麼景點」。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-170-vmj8p",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-169-ecf3f",
+                  "text": "而是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-172-2sd7d",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-171-p2qt8",
+                  "text": "「這間餐廳誰傳的？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-174-m1987",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-173-997i8",
+                  "text": "「飯店訂好了嗎？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-176-t0gkd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-175-romxo",
+                  "text": "「第三天不是改過了？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-178-3nlxg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-177-t18k0",
+                  "text": "「那張票放在哪？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-180-dtabn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-179-981sk",
+                  "text": "「還有什麼東西沒準備？」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-182-4slha",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-181-j367q",
+                  "text": "真正的旅行規劃，是很多人、很多資訊和很多次改變主意慢慢堆起來的。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-184-ghoww",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-183-0st7t",
+                  "text": "所以 KK Trip 想把 AI 放進這整個過程裡，而不只是最前面的「幫我產生行程」。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-186-udlde",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-185-ma4v3",
+                  "text": "AI 幫你起個頭，旅伴一起把它變成你們的旅行。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-188-chip2",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-187-49zmo",
+                  "text": "如果這剛好也是你排行程最頭痛的地方，那下一趟旅行，可以從 KK Trip 開始。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-191-k0u5t",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-190-5bzy2",
+                  "text": "下載 KK Trip，和旅伴開始下一趟旅行",
+                  "marks": [
+                    "key-189-juqac"
+                  ]
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-189-juqac",
+                  "href": "https://apps.apple.com/us/app/kk-trip-ai-%E6%97%85%E8%A1%8C%E8%A6%8F%E5%8A%83/id6817090176",
+                  "blank": true
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-194-tejp6",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-193-wuz9e",
+                  "text": "AI 排出的行程仍需依實際情況調整。景點營業時間、交通班次、票券規則與預訂狀態，出發前請向官方來源確認。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-205-h7tb9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-195-6w8ds",
+                  "text": "本文依 2026 年 10 月 5 日可查閱的官方產品介紹整理，著重不同產品的規劃流程，並非完整功能實測或排名。參考："
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-197-3uvto",
+                  "text": "Mindtrip 官方 FAQ",
+                  "marks": [
+                    "key-196-kibpo"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-198-4kh2k",
+                  "text": "、"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-200-yfvdo",
+                  "text": "Mindtrip App Store 介紹",
+                  "marks": [
+                    "key-199-edy5v"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-201-q99lk",
+                  "text": "、"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-203-8nzuk",
+                  "text": "去趣 chicTrip App Store 介紹",
+                  "marks": [
+                    "key-202-edj1d"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-204-vsodp",
+                  "text": "。"
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-196-kibpo",
+                  "href": "https://resources.mindtrip.ai/travelers/help/traveler-faqs",
+                  "blank": true
+                },
+                {
+                  "_type": "link",
+                  "_key": "key-199-edy5v",
+                  "href": "https://apps.apple.com/us/app/mindtrip-ai-travel-companion/id6503107567",
+                  "blank": true
+                },
+                {
+                  "_type": "link",
+                  "_key": "key-202-edj1d",
+                  "href": "https://apps.apple.com/tw/app/%E5%8E%BB%E8%B6%A3-chictrip/id6443825385",
+                  "blank": true
+                }
+              ]
+            }
+          ],
+          "featured_image": {
+            "$media": {
+              "url": "https://cms.kktrip.app/files/uploads/3229e6c0-f289-4890-9108-ce702f8563d7.png",
+              "alt": "KK Trip、Mindtrip、去趣怎麼選？從你怎麼排行程開始"
+            }
+          },
+          "author_display": "KK Trip",
+          "tags": "產品, AI 旅行規劃",
+          "original_published_at": "2026-10-05T13:31:00.000Z",
+          "original_updated_at": "2026-10-05T14:09:12.496Z"
+        }
+      },
+      {
+        "id": "350ecfae-c730-4490-8d6d-eb145ee1bf45",
+        "slug": "how-to-use-kk-trip",
+        "status": "published",
+        "data": {
+          "title": "第一次用 KK Trip？從下一趟旅行開始",
+          "excerpt": "第一次用 KK Trip，不知道從哪開始？跟著「大阪五日遊」一步一步排出第一趟旅行：跟 AI 說你想怎麼玩、挑出真正想去的地方，再把旅伴、預訂和行前準備一起整理好。",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "key-2-s5c09",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-1-k97x4",
+                  "text": "第一次打開 KK Trip，不知道從哪開始？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-4-5cy4y",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-3-btefe",
+                  "text": "其實不用先研究景點、不用先做表格，也不用把所有事情都想清楚。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-6-vfkwd",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-5-iixdb",
+                  "text": "拿你下一趟真的想去的旅行，直接開始就好。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-8-x1r4y",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-7-azt1f",
+                  "text": "這篇我們來排一趟「和爸媽去大阪五天」："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-10-r730v",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-9-u1ywc",
+                  "text": "想吃美食、逛街、去大阪城，但不要每天走到懷疑人生。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-12-7a1dq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-11-fy4ui",
+                  "text": "從跟 AI 說需求、挑景點、排每天的行程，到邀請旅伴、整理預訂和行前待辦，我們一步一步把它變成一趟真的可以出發的旅行。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-14-eetib",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-13-9fvwx",
+                  "text": "以下使用 iPhone 版繁體中文介面示範；隨著 KK Trip 更新，部分按鈕的位置或文字可能會稍微不同。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-19-ybp54",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-15-35zg8",
+                  "text": "還沒安裝的話，可以先"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-17-2iu5g",
+                  "text": "在 App Store 下載 KK Trip",
+                  "marks": [
+                    "key-16-iy4cf"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-18-ln8hl",
+                  "text": "，登入後就可以開始。"
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-16-iy4cf",
+                  "href": "https://apps.apple.com/us/app/kk-trip-ai-%E6%97%85%E8%A1%8C%E8%A6%8F%E5%8A%83/id6817090176",
+                  "blank": true
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-21-0pzbc",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-20-4js4u",
+                  "text": "1. 不用先查景點，先告訴 AI「這趟想怎麼玩」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-25-m6vv8",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-22-gh2rl",
+                  "text": "第一次登入、還沒有任何旅行時，選擇 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-23-8fj1b",
+                  "text": "「規劃新行程」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-24-guwya",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-27-t6jg7",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-26-f7yhl",
+                  "text": "接下來先不要急著搜尋「大阪必去 30 選」。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-29-un0oq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-28-9izlq",
+                  "text": "你只需要告訴 AI 幾件事："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-31-olrbg",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-30-ywyi5",
+                  "text": "去哪裡、去幾天、跟誰去，以及你們喜歡怎麼玩。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-33-8nti6",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-32-sq2oq",
+                  "text": "例如："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-35-d16g9",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-34-ce8tt",
+                  "text": "我想和爸媽去大阪五天，11 月 10 日出發、14 日回來，以大眾運輸為主。想吃美食、逛街，也想去大阪城；每天不要排太滿，下午留休息時間，盡量減少走路。住宿還沒決定，請先幫我規劃。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-37-w64pt",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-36-xbwic",
+                  "text": "這就已經是很好的開始了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-39-ucwu5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-38-p26i6",
+                  "text": "如果機票已經買好，可以補上抵達和離開時間；飯店訂好了，就告訴 AI 住哪裡。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-41-q6b9i",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-40-2e3zu",
+                  "text": "有什麼「一定要去」或「拜託不要排」的地方，也可以直接說。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-43-cnblz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-42-6zkfa",
+                  "text": "還不知道的事情？沒關係，就說還沒決定。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-47-gw6i1",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-44-4fagg",
+                  "text": "比起只丟一句「大阪五日遊」，多告訴 AI 一點"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-45-2tk6c",
+                  "text": "你們是誰、想怎麼玩",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-46-wr3q4",
+                  "text": "，排出來的行程通常會更接近你真正想要的旅行。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-49-mzvpj",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-48-fst0m",
+                  "text": "2. AI 找了一堆地方，但你不用照單全收"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-51-yrfi9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-50-wvspw",
+                  "text": "接下來，AI 會根據你的需求推薦適合的景點。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-53-x32l9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-52-1ad9d",
+                  "text": "這時候先別急著全部留下來。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-55-g4rse",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-54-nqmus",
+                  "text": "看看清單、打開地圖，問自己："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-57-0sqc9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-56-82ykn",
+                  "text": "「這些地方，我們真的想去嗎？」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-59-8gui6",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-58-x6fow",
+                  "text": "不想去的景點可以取消選取；覺得推薦方向不太對，也可以直接跟 AI 說。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-61-x3n7n",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-60-5i2w5",
+                  "text": "例如："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-63-fopsw",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-62-ltzqb",
+                  "text": "「保留大阪城和一個購物區，其他換成適合爸媽慢慢逛的地方。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-65-4hz9m",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-64-b5j5f",
+                  "text": "五天就是五天。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-67-kqr56",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-66-wgpcw",
+                  "text": "與其把 25 個景點硬塞進去，不如先留下真正期待的地方。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-71-jqaxh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-68-mz940",
+                  "text": "選得差不多後，按下 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-69-qw0oz",
+                  "text": "「確認…個景點，排行程」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-70-78ocm",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-73-mjakz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-72-ji0k6",
+                  "text": "接下來就換 AI 傷腦筋，看看怎麼把它們排進這五天。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-75-u8yuh",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-74-zcnkn",
+                  "text": "3. 行程出來了！先別急著說 OK"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-77-z3m3d",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-76-7zv8t",
+                  "text": "AI 排好每天的安排後，切換不同日期看看。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-79-xmifs",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-78-k7nzl",
+                  "text": "這時候最重要的不是「景點夠不夠多」，而是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-81-deju6",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-80-4g1rz",
+                  "text": "這一天真的走得完嗎？",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-83-ir9fz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-82-770kd",
+                  "text": "特別檢查三件事："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-85-8jcjf",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-84-vi1yy",
+                  "text": "**第一天和最後一天：**有沒有留下抵達、離開和往返機場的時間？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-87-0uu2d",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-86-sf4rr",
+                  "text": "**每天的節奏：**景點是不是一直東跑西跑？有沒有吃飯、休息和搭車的時間？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-89-h1e3l",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-88-mpspq",
+                  "text": "**不能動的安排：**已經訂好的餐廳、票券或住宿，有沒有撞到其他行程？"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-91-j82tz",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-90-6ohcn",
+                  "text": "假設第二天看起來實在太硬，可以直接告訴 AI："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-93-q5ca8",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-92-my55c",
+                  "text": "「第二天下午只留一個景點，晚餐前回飯店休息。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-95-061si",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-94-w8xxc",
+                  "text": "不用整份打掉重來。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-97-v3a2x",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-96-4ysmj",
+                  "text": "哪裡不對，就告訴 AI 哪裡要改。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-101-md3un",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-98-j07bw",
+                  "text": "覺得差不多了，再選擇 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-99-1dtll",
+                  "text": "「確認行程，搜尋深度資訊」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-100-o2v0g",
+                  "text": "，繼續整理票券、行前準備和其他旅行資訊。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-103-9l66b",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-102-afv5a",
+                  "text": "4. 滿意了？把草稿正式變成你的旅行"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-105-ceeeh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-104-jesw5",
+                  "text": "最後再把整份計畫看一次。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-109-zv6yv",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-106-23puq",
+                  "text": "還想換景點？選 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-107-bxbgo",
+                  "text": "「修改景點」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-108-shd94",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-113-psiuq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-110-v51ci",
+                  "text": "時間排得不順？選 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-111-w36e3",
+                  "text": "「修改行程」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-112-z6jrb",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-115-sja7h",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-114-474k4",
+                  "text": "都 OK 了，就按下："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-117-10j3t",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-116-pz2b7",
+                  "text": "「建立並匯入行程」→「開啟行程」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-119-5kuzt",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-118-713ll",
+                  "text": "你的第一趟 KK Trip 旅行正式建立了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-121-vpe97",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-120-0w6s2",
+                  "text": "這裡有一個重要差別："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-125-f2u6q",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-122-ygxgx",
+                  "text": "前面的 AI 規劃是"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-123-6gteh",
+                  "text": "草稿",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-124-e3mjz",
+                  "text": "；建立旅行之後，才會變成你和旅伴接下來真正一起使用的計畫。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-127-0ti9w",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-126-asxys",
+                  "text": "接下來，就可以把其他人抓進來了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-129-8dwr1",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-128-2balv",
+                  "text": "5. 一個人排完太累，把旅伴叫進來"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-133-5jsux",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-130-6j818",
+                  "text": "打開 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-131-n2x63",
+                  "text": "「旅伴」→「邀請旅伴」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-132-b9ypk",
+                  "text": "，輸入對方登入 KK Trip 使用的 Email。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-135-56aph",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-134-2r4fc",
+                  "text": "接著選擇他可以做什麼："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-137-ayi4h",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-136-ta8y4",
+                  "text": "**可編輯：**適合真的會跟你一起排行程的人。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-139-uxv6v",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-138-o1thm",
+                  "text": "**僅檢視：**適合「你排好我負責出現」型旅伴。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-141-4tm65",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-140-460m3",
+                  "text": "如果對方看不到旅行，第一件事先確認："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-143-d19m0",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-142-7bt9f",
+                  "text": "你邀請的 Email，和對方登入 KK Trip 的 Email 是不是同一個？",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-145-z8ayu",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-144-wctnw",
+                  "text": "如果對方使用 Apple 登入並選擇隱藏 Email，也記得確認帳號實際使用的地址。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-147-truos",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-146-0gjte",
+                  "text": "人都進來之後，我們很推薦先做一件事："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-149-ux4oa",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-148-vafod",
+                  "text": "每個人看一輪，決定哪些「一定要去」、哪些「其實可以刪」。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-151-1town",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-150-scd22",
+                  "text": "先把這件事談好，後面會和平很多。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-153-aszu1",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-152-itlst",
+                  "text": "6. 飯店訂好了？不要讓確認信繼續躺在信箱深處"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-155-qaisq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-154-5jynp",
+                  "text": "行程有了，接下來通常就會開始訂飯店、交通和各種票券。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-159-0vfy1",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-156-p5xfz",
+                  "text": "打開 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-157-5k8jg",
+                  "text": "「預訂」→「新增預訂」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-158-ixco2",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-161-lsmop",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-160-o4iti",
+                  "text": "你可以自己輸入，也可以："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-163-sguol",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-162-ou0hn",
+                  "text": "貼上確認信文字、上傳 PDF 或截圖 →「自動帶入」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-165-jehff",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-164-1fnyp",
+                  "text": "KK Trip 會協助把裡面的預訂資訊整理成草稿。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-167-lzau5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-166-qiu5v",
+                  "text": "但這一步請不要閉著眼睛按儲存。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-169-8ayes",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-168-tlnv5",
+                  "text": "特別確認："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-171-d3jj5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-170-wufsi",
+                  "text": "名稱、日期、時間、地點、入住／退房日期，以及跨日航班。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-173-5r3v7",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-172-ddshn",
+                  "text": "如果一份文件裡有好幾筆預訂，也可以選擇哪些要加入旅行。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-175-uxcia",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-174-f5l6z",
+                  "text": "確認沒問題，再儲存。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-179-1ndky",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-176-aqlh2",
+                  "text": "KK Trip 是幫你"
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-177-n3sma",
+                  "text": "整理已經取得的預訂資訊",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-178-i26sm",
+                  "text": "。是否真的訂位成功、付款與取消規則等，還是要以原本的預訂平台和確認信為準。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-181-6zdsq",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-180-jsxqi",
+                  "text": "7. 最後處理那些「我等等記得弄」的事情"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-183-fj0zt",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-182-0x3y2",
+                  "text": "旅行最危險的一句話可能就是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-185-e7xon",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-184-h9jnj",
+                  "text": "「這個我晚點再弄。」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-187-xutap",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-186-268vs",
+                  "text": "然後三個禮拜後就忘了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-191-o3s5y",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-188-mrk2p",
+                  "text": "所以接著打開 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-189-da8id",
+                  "text": "「待辦」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-190-jdao7",
+                  "text": "，把出發前還沒完成的事情放進去："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-193-0nc1l",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-192-zfg7r",
+                  "text": "買機場交通票"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-195-yu6w1",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-194-5sasu",
+                  "text": "準備日本上網方案"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-197-mpa87",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-196-vsuin",
+                  "text": "確認飯店入住方式"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-199-e3kxj",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-198-zpynh",
+                  "text": "帶轉接頭"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-201-fxytb",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-200-kl49c",
+                  "text": "確認餐廳預約"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-203-habf1",
+              "style": "normal",
+              "listItem": "number",
+              "level": 1,
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-202-2f5i4",
+                  "text": "買旅平險"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-205-6hw9e",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-204-6pupz",
+                  "text": "不知道自己漏了什麼，也可以問旅行裡的 AI："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-207-4vx1q",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-206-g0gum",
+                  "text": "「幫我整理這趟大阪旅行的行前待辦，包括交通、上網和住宿確認。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-209-p9xjr",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-208-a79dr",
+                  "text": "AI 先幫你想，你再留下真正需要的。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-211-lqb2i",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-210-9q8ka",
+                  "text": "然後看著它們一個一個被打勾。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-213-4bh5l",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-212-6spy4",
+                  "text": "8. 出發了，但計畫突然變了？很正常"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-215-v8ih9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-214-wo138",
+                  "text": "終於到大阪。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-217-4471n",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-216-nnebb",
+                  "text": "然後——"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-219-dy7tm",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-218-3a3tb",
+                  "text": "下雨了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-221-j6urn",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-220-wbsbf",
+                  "text": "睡過頭了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-223-tmmyh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-222-48tph",
+                  "text": "爸媽走累了。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-225-53ret",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-224-xizvy",
+                  "text": "昨天逛太久，今天沒有人想九點出門。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-227-yxr5u",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-226-136a1",
+                  "text": "旅行就是這樣。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-229-nv0q5",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-228-5z4iz",
+                  "text": "KK Trip 裡的行程建立後還是可以繼續修改。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-231-auu0u",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-230-xev45",
+                  "text": "你可以自己調整，也可以告訴 AI："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-233-cipug",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-232-yd26c",
+                  "text": "「第二天下午改成室內活動，晚餐的預訂保留。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-235-u6ctr",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-234-2z86z",
+                  "text": "或："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-237-0bxyj",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-236-pk9nr",
+                  "text": "「第三天早上晚一小時出門，幫我調整後面的安排。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-239-1ucth",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-238-iolbw",
+                  "text": "甚至只是："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-241-avxad",
+              "style": "blockquote",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-240-qqpwd",
+                  "text": "「把這間咖啡店加入想去的景點，先不要排進每天的行程。」"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-243-r1b3e",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-242-i11vq",
+                  "text": "越具體告訴 AI 哪一天、什麼不能動、什麼可以改，它越容易理解你想做什麼。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-247-t98no",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-244-cpa6l",
+                  "text": "改完後回到 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-245-7rqjm",
+                  "text": "「行程」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-246-e50fc",
+                  "text": " 看一下結果，旅伴也能看到更新後的安排。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-253-40s48",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-248-ixj7o",
+                  "text": "要找位置就開 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-249-pye3m",
+                  "text": "「地圖」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-250-91iw1",
+                  "text": "；想找之前整理的旅行參考資訊，就到 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-251-v44b8",
+                  "text": "「旅遊資訊」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-252-wzns7",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-255-5bq4v",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-254-7nk5z",
+                  "text": "出發前，最後再看三件事"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-257-2h7x9",
+              "style": "h3",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-256-h6due",
+                  "text": "AI 說的，不等於店家說的"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-259-0fk1k",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-258-dqgsy",
+                  "text": "景點營業時間、交通班次、票券規則等資訊都有可能變動。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-261-unf9y",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-260-1tewa",
+                  "text": "真正重要的資訊，出發前再去官方來源確認一次。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-263-pflqo",
+              "style": "h3",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-262-qke06",
+                  "text": "要離線看？記得出發前先打開"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-265-5xwjt",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-264-uhcti",
+                  "text": "KK Trip 會保留部分已載入的旅行內容，網路不穩時仍可能查看先前載入的資料。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-269-99e2l",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-266-cmhlj",
+                  "text": "但離線內容不一定是最新版，而且 "
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-267-d3li5",
+                  "text": "AI 和多人即時同步還是需要網路",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-268-14gcp",
+                  "text": "。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-271-yu47d",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-270-7y26q",
+                  "text": "所以搭飛機前，可以先把重要資料打開一次。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-273-6agyk",
+              "style": "h3",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-272-ywpbw",
+                  "text": "不要把旅行排成軍事演習"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-275-bm789",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-274-lbtp6",
+                  "text": "10:00 景點 A"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-277-mnuyk",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-276-0d3ws",
+                  "text": "10:47 景點 B"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-279-84uu7",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-278-po0gm",
+                  "text": "11:32 景點 C"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-281-kt6no",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-280-dea5a",
+                  "text": "12:08 午餐"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-283-i5s1e",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-282-avwo1",
+                  "text": "12:41 下一站……"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-285-o0v9o",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-284-h2400",
+                  "text": "先不要。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-287-kn6gl",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-286-iszen",
+                  "text": "留一點搭車、吃飯、排隊、迷路，以及突然看到一家可愛小店的時間。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-289-87mkq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-288-q4abo",
+                  "text": "一份好的旅行計畫，不是每分鐘都有安排，而是改變計畫的時候也不會慌。",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-291-1eh51",
+              "style": "h2",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-290-ujltr",
+                  "text": "今天其實只要做三件事"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-293-38flh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-292-oxed1",
+                  "text": "第一次用 KK Trip，不需要一次把所有功能學完。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-295-b0anq",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-294-ldizt",
+                  "text": "今天先完成："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-297-c8hnu",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-296-jdrbw",
+                  "text": "① 跟 AI 說你下一趟想去哪",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-299-9hm8t",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-298-9l9z7",
+                  "text": "② 把草稿建立成一趟旅行",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-301-iwaua",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-300-own8h",
+                  "text": "③ 邀請一位旅伴進來",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-303-veotu",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-302-wyuyg",
+                  "text": "就這樣。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-305-sz23p",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-304-vqf3g",
+                  "text": "等飯店訂好了，再把預訂放進來；想到出發前要做什麼，就加進待辦。"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-307-gilzh",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-306-4mbbc",
+                  "text": "你的旅行會從一句："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-309-qy919",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-308-abrau",
+                  "text": "「我們要不要去大阪？」",
+                  "marks": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-311-fipti",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-310-1xfrv",
+                  "text": "慢慢變成："
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-314-7inp9",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-312-z3k6v",
+                  "text": "「好，行李收一收，出發！」",
+                  "marks": [
+                    "strong"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "key-313-gkk2m",
+                  "text": " ✈️"
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "key-317-qw02j",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "key-316-5qubc",
+                  "text": "下載 KK Trip，開始你的第一趟旅行",
+                  "marks": [
+                    "key-315-dpzdu"
+                  ]
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "key-315-dpzdu",
+                  "href": "https://apps.apple.com/us/app/kk-trip-ai-%E6%97%85%E8%A1%8C%E8%A6%8F%E5%8A%83/id6817090176",
+                  "blank": true
+                }
+              ]
+            }
+          ],
+          "featured_image": {
+            "$media": {
+              "url": "https://cms.kktrip.app/files/uploads/9fed8112-13f0-47a7-a05a-5a85e69f398f.png",
+              "alt": "第一次用 KK Trip？從下一趟旅行開始"
+            }
+          },
+          "author_display": "KK Trip",
+          "tags": "使用教學, AI 旅行規劃",
+          "original_published_at": "2026-10-05T13:31:00.000Z",
+          "original_updated_at": "2026-10-05T14:05:43.467Z"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+---
+interface Props {
+  node: { style?: string; textAlign?: string; _headingId?: string }
+}
+const { node } = Astro.props
+const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const
+const Tag = headings.find(tag => tag === node.style) || (node.style === 'blockquote' ? 'blockquote' : 'p')
+---
+<Tag id={node._headingId} class:list={{ 'text-center': node.textAlign === 'center', 'text-right': node.textAlign === 'right', 'text-justify': node.textAlign === 'justify' }}><slot /></Tag>

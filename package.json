@@ -1,21 +1,20 @@
 {
-  "name": "flarecms",
+  "name": "kktrip-cms",
   "version": "2.0.0",
   "private": true,
-  "description": "Flare CMS - Edge-first headless CMS built for Cloudflare Workers",
+  "description": "KK Trip content site and EmDash CMS",
   "author": "Jaime Aleman",
   "license": "MIT",
   "scripts": {
-    "build": "pnpm --filter @flare-cms/core build",
-    "build:site": "pnpm --filter @flare-cms/site build",
-    "deploy:cms": "echo '⚠️  Deploy via CI/CD: merge develop → main, then git push. GitHub Actions handles the rest.'",
-    "deploy:site": "echo '⚠️  Deploy via CI/CD: merge develop → main, then git push. GitHub Actions handles the rest.'",
-    "deploy:all": "echo '⚠️  Deploy via CI/CD: merge develop → main, then git push. GitHub Actions handles the rest.'",
-    "dev:cms": "echo 'Run wrangler dev in packages/cms/ tmux pane'",
-    "dev:site": "echo 'Run pnpm dev in packages/site/ tmux pane'",
-    "test": "pnpm --filter @flare-cms/core test",
-    "unlighthouse:run": "pnpm dlx unlighthouse-ci@0.17.2 --site https://flarecms.dev --build-static",
-    "unlighthouse:serve": "npx sirv-cli ./.unlighthouse"
+    "dev": "pnpm --filter @flare-cms/blog dev",
+    "build": "pnpm --filter @flare-cms/blog build",
+    "check": "pnpm --filter @flare-cms/blog check",
+    "test": "pnpm --filter @flare-cms/blog test",
+    "seed:validate": "pnpm --filter @flare-cms/blog seed:validate",
+    "deploy:preview": "pnpm --filter @flare-cms/blog deploy",
+    "build:legacy": "pnpm --filter @flare-cms/core build",
+    "test:legacy": "pnpm --filter @flare-cms/core test",
+    "lint": "pnpm --filter @flare-cms/blog lint"
   },
   "engines": {
     "node": ">=18.0.0"

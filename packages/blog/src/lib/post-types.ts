@@ -15,6 +15,7 @@ export interface Post {
   title: string
   excerpt: string
   contentHtml: string
+  contentBlocks?: Array<{ _type: string; [key: string]: unknown }>
   author: string
   image: string | null
   tags: string[]

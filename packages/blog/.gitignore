@@ -3,3 +3,8 @@ dist/
 .astro/
 .wrangler/
 .dev.vars
+
+worker-configuration.d.ts
+.migration/
+.emdash/
+emdash-env.d.ts

@@ -1,5 +1,8 @@
 ---
 import TagList from './TagList.astro'
+import { PortableText } from 'emdash/ui'
+import ArticleBlock from './ArticleBlock.astro'
+import { articleBlocks } from '../lib/article-blocks'
 import Toc from './Toc.astro'
 import Share from './Share.astro'
 import Avatar from './Avatar.astro'
@@ -72,7 +75,9 @@ const url = new URL(`/posts/${encodeURIComponent(post.slug)}`, Astro.site).toStr
       )
     }
 
-    <div class="prose prose-lg prose-post mt-10 max-w-none" set:html={html} />
+    <div class="prose prose-lg prose-post mt-10 max-w-none">
+      {post.contentBlocks ? <PortableText value={articleBlocks(post.contentBlocks)} components={{ block: ArticleBlock }} /> : <Fragment set:html={html} />}
+    </div>
 
     <div class="mt-12 border-t border-border pt-6">
       <TagList tags={post.tags} />

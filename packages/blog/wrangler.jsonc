@@ -1,10 +1,32 @@
 {
-  "name": "kktrip-blog",
-  "main": "dist/_worker.js/index.js",
-  "compatibility_date": "2026-02-03",
-  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-  "assets": { "binding": "ASSETS", "directory": "./dist" },
-  "routes": [{ "pattern": "news.kktrip.app", "custom_domain": true }],
-  "observability": { "enabled": true },
-  "vars": { "PUBLIC_CMS_URL": "https://cms.kktrip.app" }
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kktrip-emdash-preview",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kktrip-emdash-preview-db"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "kktrip-emdash-preview-media"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  }
 }

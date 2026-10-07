@@ -1,4 +1,4 @@
-import { getPosts } from './cms'
+import { getPost, getPosts } from './cms'
 import type { Post } from './post-types'
 
 /** Edge-cache pages briefly so a new post shows within a minute without hammering the CMS. */
@@ -10,5 +10,14 @@ export async function loadPosts(): Promise<{ posts: Post[]; failed: boolean }> {
   } catch (err) {
     console.error('[blog] failed to load posts:', err)
     return { posts: [], failed: true }
+  }
+}
+
+export async function loadPost(slug: string): Promise<{ post: Post | null; failed: boolean }> {
+  try {
+    return { post: await getPost(slug), failed: false }
+  } catch (err) {
+    console.error('[blog] failed to load post:', err)
+    return { post: null, failed: true }
   }
 }
