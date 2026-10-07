@@ -1,23 +1,53 @@
 {
   "name": "kktrip-cms",
+  "type": "module",
   "version": "2.0.0",
   "private": true,
-  "description": "KK Trip content site and EmDash CMS",
-  "author": "Jaime Aleman",
-  "license": "MIT",
+  "description": "KK Trip content hub powered by EmDash",
   "scripts": {
-    "dev": "pnpm --filter @flare-cms/blog dev",
-    "build": "pnpm --filter @flare-cms/blog build",
-    "check": "pnpm --filter @flare-cms/blog check",
-    "test": "pnpm --filter @flare-cms/blog test",
-    "seed:validate": "pnpm --filter @flare-cms/blog seed:validate",
-    "deploy:production": "pnpm --filter @flare-cms/blog deploy",
-    "build:legacy": "pnpm --filter @flare-cms/core build",
-    "test:legacy": "pnpm --filter @flare-cms/core test",
-    "lint": "pnpm --filter @flare-cms/blog lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "wrangler types && astro check",
+    "test": "vitest --run",
+    "deploy": "astro build && wrangler deploy",
+    "types": "wrangler types",
+    "seed:validate": "emdash seed seed/seed.json --validate",
+    "lint": "eslint .",
+    "deploy:production": "astro build && wrangler deploy"
   },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/cloudflare": "^13.7.0",
+    "@astrojs/react": "^5.0.7",
+    "@emdash-cms/cloudflare": "^1.1.0",
+    "@portabletext/to-html": "^6.0.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^6.4.8",
+    "emdash": "^1.1.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.3",
+    "eslint": "^9.39.3",
+    "globals": "^16.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^7.3.6",
+    "vitest": "^4.0.15",
+    "wrangler": "^4.147.0"
+  },
+  "emdash": {
+    "seed": "seed/seed.json"
+  },
+  "license": "MIT",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.16.0"
   },
   "packageManager": "pnpm@12.9.1+sha512.06b055fff5cd20dc12781de173ced3310ce0951bf2ec620211a16045d5444d5c93a663210764ef29a653a610459ba0368f0e74f84d80c54723cf95aae7bc0d6d"
 }

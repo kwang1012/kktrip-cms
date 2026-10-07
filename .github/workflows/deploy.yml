@@ -16,8 +16,8 @@ jobs:
       - name: Install pinned pnpm
         run: npm install --global pnpm@12.9.1
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @flare-cms/blog lint
-      - run: pnpm --filter @flare-cms/blog test
-      - run: pnpm --filter @flare-cms/blog seed:validate
-      - run: pnpm --filter @flare-cms/blog check
-      - run: pnpm --filter @flare-cms/blog build
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm seed:validate
+      - run: pnpm check
+      - run: pnpm build
