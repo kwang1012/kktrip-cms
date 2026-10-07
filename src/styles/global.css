@@ -83,6 +83,9 @@ body {
 
 /* Article body: editorial reading column. */
 .prose-post {
+  /* EmDash's table component uses these surface tokens for headers and stripes. */
+  --color-surface: var(--card);
+  --color-bg-subtle: var(--accent-soft);
   --tw-prose-body: var(--text);
   --tw-prose-headings: var(--text);
   --tw-prose-links: var(--accent-deep);
