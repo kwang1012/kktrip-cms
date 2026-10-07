@@ -32,27 +32,31 @@ Embedded base64 images are extracted to `public/migrated-media/` and served
 with the site. Verify every image after import; keep the old CMS reachable until those copies
 are complete. Content in linked external URLs is not copied automatically.
 
-## Preview and cutover
+## Production
 
-The checked-in Wrangler config targets `kktrip-emdash-preview` with a separate
-`kktrip-emdash-preview-db` and `kktrip-emdash-preview-media` bucket. It has no
-production custom-domain route. Wrangler provisions these named resources on
-first deployment. Core schema migrations run on the first request.
+The production Worker is `kktrip-emdash`, with its own `kktrip-emdash-db`
+and `kktrip-emdash-media` resources. The original `kktrip-blog` deployment
+and FlareCMS resources remain available for rollback. Its pre-cutover version
+is `7a228754-8bfe-48f6-b1d6-8c375f1836d4`. To roll back public traffic, assign
+the `news.kktrip.app` custom domain back to `kktrip-blog`; keep both databases
+and all media buckets intact.
 
-1. Build and dry-run packaging: `pnpm build`, then `pnpm exec wrangler deploy --dry-run`.
-2. Deploy the preview with `pnpm exec wrangler deploy` and configure
-   `EMDASH_ENCRYPTION_KEY` as a Worker secret using protected input.
-3. Complete setup at `/_emdash/admin/`, register your passkey, and select the
-   migrated seed content. Check the three posts, dates, tags, RSS, and images.
-4. Create/edit/publish a test post and confirm saved drafts stay private.
-5. After preview approval, set the production site URL and custom-domain route
-   for `news.kktrip.app`, and register a passkey on that final origin. Passkeys
-   from the preview origin do not automatically work on the production origin.
-6. Keep the old FlareCMS Worker and database until the migration is verified.
+Deploy with `pnpm deploy` after verification. Keep `EMDASH_ENCRYPTION_KEY` and
+`KKTRIP_SETUP_KEY` as Worker secrets. Protected local backups live under the
+ignored `.emdash/` directory and must never be committed.
 
-GitHub Actions runs validation only; the upstream FlareCMS auto-deployment
-workflow was replaced to avoid deploying the upstream documentation site.
-Production DNS and existing resources are not changed by pushing this branch.
+First administrator setup is protected by `KKTRIP_SETUP_KEY`. The private
+setup link exchanges the key for a secure, HttpOnly cookie valid for one hour.
+Open that link on `news.kktrip.app` and complete passkey registration yourself.
+Normal authenticated administration uses EmDash's own passkey sessions.
+The protection remains enabled for setup/recovery routes after registration.
+
+The seed import copies remote media into R2. Check all articles, original dates,
+RSS, and images after deployment before switching the custom domain.
+Production schema migrations run on the first request; content is imported by
+the protected setup endpoint. The old unpublished draft stays in FlareCMS.
+
+GitHub Actions validates changes; production deployments are explicit.
 
 ## Checks
 

@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kktrip-emdash-preview",
+  "name": "kktrip-emdash",
   "main": "./src/worker.ts",
   "compatibility_date": "2026-10-06",
   "compatibility_flags": [
@@ -9,13 +9,14 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "kktrip-emdash-preview-db"
+      "database_name": "kktrip-emdash-db",
+      "database_id": "f94d42e2-652e-4ba3-b0ce-a8cb5f9cc753"
     }
   ],
   "r2_buckets": [
     {
       "binding": "MEDIA",
-      "bucket_name": "kktrip-emdash-preview-media"
+      "bucket_name": "kktrip-emdash-media"
     }
   ],
   "triggers": {
@@ -28,5 +29,17 @@
     "traces": {
       "enabled": true
     }
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "d71254f45a2b4a1e959b1dca6aad42db"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "news.kktrip.app",
+      "custom_domain": true
+    }
+  ]
 }

@@ -22,10 +22,10 @@ pnpm check
 pnpm build
 ```
 
-The checked-in configuration targets an isolated preview Worker and fresh
-resources. Follow the [migration and cutover guide](packages/blog/README.md)
-before deploying or assigning production domains. GitHub Actions validates the
-application; it does not deploy automatically.
+The production configuration targets `kktrip-emdash` at `news.kktrip.app`,
+with dedicated D1 and R2 resources. Follow the [production guide](packages/blog/README.md)
+for secrets and administrator setup. GitHub Actions validates the application;
+it does not deploy automatically.
 
 The legacy FlareCMS engine, backend, Astro integration and documentation site
 remain in `packages/core`, `packages/cms`, `packages/astro` and `packages/site`

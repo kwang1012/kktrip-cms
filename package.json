@@ -11,7 +11,7 @@
     "check": "pnpm --filter @flare-cms/blog check",
     "test": "pnpm --filter @flare-cms/blog test",
     "seed:validate": "pnpm --filter @flare-cms/blog seed:validate",
-    "deploy:preview": "pnpm --filter @flare-cms/blog deploy",
+    "deploy:production": "pnpm --filter @flare-cms/blog deploy",
     "build:legacy": "pnpm --filter @flare-cms/core build",
     "test:legacy": "pnpm --filter @flare-cms/core test",
     "lint": "pnpm --filter @flare-cms/blog lint"
