@@ -15,7 +15,7 @@ export function credits(value: unknown): Credit[] {
     const credit = record(item), byline = record(credit.byline)
     if (typeof byline.displayName !== 'string') return []
     return [{ name: byline.displayName, slug: String(byline.slug || ''),
-      avatar: typeof byline.avatarMediaId === 'string' ? `/_emdash/api/media/file/${encodeURIComponent(byline.avatarMediaId)}` : null,
+      avatar: typeof byline.avatarStorageKey === 'string' && byline.avatarStorageKey ? `/_emdash/api/media/file/${byline.avatarStorageKey.split('/').map(encodeURIComponent).join('/')}` : null,
       role: typeof credit.roleLabel === 'string' ? credit.roleLabel : '' }]
   }) : []
 }
