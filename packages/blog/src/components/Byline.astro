@@ -1,0 +1,12 @@
+---
+import Avatar from './Avatar.astro'
+import type { Post } from '../lib/post-types'
+interface Props { post: Post }
+const { post } = Astro.props
+---
+{post.credits?.length ? <div class="mt-6 flex flex-wrap gap-5 text-sm">
+  {post.credits.map(credit => <div class="flex items-center gap-3">
+    {credit.avatar ? <img src={credit.avatar} alt="" width="36" height="36" class="size-9 rounded-full object-cover" /> : <Avatar name={credit.name} size={36} />}
+    <div><p class="font-medium">{credit.name}</p>{credit.role && <p class="text-xs text-text-sub">{credit.role}</p>}</div>
+  </div>)}
+</div> : post.author && <div class="mt-6 flex items-center gap-3 text-sm"><Avatar name={post.author} size={36} /><span class="font-medium">{post.author}</span></div>}

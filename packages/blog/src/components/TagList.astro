@@ -1,12 +1,14 @@
 ---
+import { tagHref, type TermLink } from '../lib/editorial'
 interface Props {
   tags: string[]
+  terms?: TermLink[]
   active?: string
   /** Prepend an "all" chip linking home. */
   allLabel?: string
 }
 
-const { tags, active, allLabel } = Astro.props
+const { tags, terms, active, allLabel } = Astro.props
 const chip = 'inline-block rounded-full border px-3.5 py-1.5 text-sm transition-colors'
 const on = 'border-text bg-text font-medium text-bg'
 const off = 'border-border-strong text-text-sub hover:border-text hover:text-text'
@@ -24,7 +26,7 @@ const off = 'border-border-strong text-text-sub hover:border-text hover:text-tex
       )}
       {tags.map((tag) => (
         <li>
-          <a href={`/tag/${encodeURIComponent(tag)}`} class:list={[chip, tag === active ? on : off]}>
+          <a href={tagHref(tag, terms)} class:list={[chip, tag === active ? on : off]}>
             {tag}
           </a>
         </li>

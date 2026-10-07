@@ -1,5 +1,6 @@
 import { toHTML } from '@portabletext/to-html'
 import { imageUrl, splitTags, toDate } from './normalize'
+import { terms, credits } from './editorial'
 import type { Post } from './post-types'
 
 const string = (value: unknown): string => typeof value === 'string' ? value : ''
@@ -51,13 +52,17 @@ export function normalizeEmDashPost(entry: { id: string; data: object }, allowPr
   if (!allowPreview && data.status && data.status !== 'published') return null
   const title = string(data.title).trim()
   if (!entry.id || !title) return null
+  const taxonomy = data.terms as Record<string, unknown> | undefined
+  const tagTerms = terms(taxonomy?.tag)
+  const bylines = credits(data.bylines)
   const created = toDate(data.createdAt, new Date(0))
   return {
     id: string(data.id) || entry.id, slug: entry.id, title,
     excerpt: string(data.excerpt), contentHtml: contentHtml(data.content),
     contentBlocks: Array.isArray(data.content) ? data.content.filter((block): block is { _type: string; [key: string]: unknown } => !!block && typeof block === 'object' && typeof block._type === 'string') : [],
-    author: string(data.author_display) || string(data.author),
-    image: mediaUrl(data.featured_image), tags: splitTags(data.tags),
+    credits: bylines, tagTerms, categories: terms(taxonomy?.category),
+    author: bylines.map(credit => credit.name).join('、') || string(data.author_display) || string(data.author),
+    image: mediaUrl(data.featured_image), tags: tagTerms.length ? tagTerms.map(term => term.label) : splitTags(data.tags),
     publishedAt: toDate(data.original_published_at || data.publishedAt, created),
     updatedAt: toDate(data.original_updated_at || data.updatedAt, created),
   }

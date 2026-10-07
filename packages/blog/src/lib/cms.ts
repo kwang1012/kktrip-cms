@@ -1,4 +1,4 @@
-import { getEmDashCollection, getEmDashEntry } from 'emdash'
+import { getEmDashCollection, getEmDashEntry, getSeoMeta } from 'emdash'
 import { normalizeEmDashPost } from './emdash-post'
 import type { Post } from './post-types'
 
@@ -24,7 +24,9 @@ export async function getPosts(): Promise<Post[]> {
 export async function getPost(slug: string): Promise<Post | null> {
   const result = await getEmDashEntry('posts', slug)
   if (result.error) throw result.error
-  return result.entry ? normalizeEmDashPost(result.entry, true) : null
+  const post = result.entry ? normalizeEmDashPost(result.entry, true) : null
+  if (post && result.entry) post.seo = getSeoMeta(result.entry, { siteTitle: 'KK Trip 旅誌', siteUrl: 'https://news.kktrip.app', path: `/posts/${encodeURIComponent(slug)}` })
+  return post
 }
 
 export function tagCounts(posts: Post[]): { tag: string; count: number }[] {

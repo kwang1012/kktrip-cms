@@ -1,90 +1,25 @@
 ---
 import Button from './Button.astro'
-import ExternalIcon from './ExternalIcon.astro'
-import { navGroups } from '../lib/nav'
+import CmsMenu from './CmsMenu.astro'
+import { navigation } from '../lib/chrome'
 import { appLink } from '../lib/site'
 import { t } from '../lib/strings'
-
-const trigger =
-  'inline-flex items-center gap-1 rounded-lg px-3 py-2 text-[14px] text-text-sub transition-colors hover:text-text group-hover:text-text focus-visible:text-text'
-const menuItem =
-  'flex items-center justify-between gap-6 rounded-lg px-3 py-2 text-[14px] text-text-sub transition-colors hover:bg-accent-soft hover:text-accent-deep'
+const items = await navigation('primary')
 ---
-
 <header class="sticky top-0 z-40 border-b border-border bg-bg/85 backdrop-blur-md">
   <div class="grid h-16 grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:px-8">
     <a href="https://kktrip.app" class="flex items-center gap-2.5 justify-self-start" aria-label={t.siteName}>
       <img src="/favicon-32x32.png" alt="" width="32" height="32" class="size-8 rounded-lg" />
-      <!-- <span class="text-lg font-bold tracking-tight">KK Trip</span> -->
     </a>
-
-    <!-- Desktop menus: open on hover or keyboard focus -->
-    <nav class="hidden items-center gap-1 md:flex" aria-label="KK Trip">
-      {
-        navGroups.map((group) => (
-          <div class="group relative">
-            <button type="button" class={trigger} aria-haspopup="true">
-              {group.label}
-              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </button>
-            <div class="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2 opacity-0 transition-opacity duration-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-              <ul class="min-w-52 rounded-xl border border-border bg-card p-1.5 shadow-lg">
-                {group.items.map((item) => (
-                  <li>
-                    <a
-                      href={item.href}
-                      class={menuItem}
-                      {...(item.external ? { target: '_blank', rel: 'noopener' } : {})}
-                    >
-                      <span>{item.label}</span>
-                      {item.external && <ExternalIcon />}
-                      {item.external && <span class="sr-only">{t.external}</span>}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))
-      }
-    </nav>
-
+    <nav class="hidden md:block" aria-label="主要導覽"><CmsMenu items={items} /></nav>
     <div class="col-start-3 flex items-center gap-1 justify-self-end">
-      <a
-        href={appLink('/login')}
-        target="_blank"
-        rel="noopener"
-        class="hidden items-center gap-1.5 rounded-lg px-3 py-2 text-[14px] font-medium text-text-sub transition-colors hover:text-text sm:inline-flex"
-      >
-        {t.login}
-      </a>
+      <a href={appLink('/login')} target="_blank" rel="noopener noreferrer" class="hidden rounded-lg px-3 py-2 text-sm text-text-sub hover:text-text sm:inline-flex">{t.login}</a>
       <Button href={appLink('/login')} size="sm" class="rounded-lg!">{t.start}</Button>
-
-      <!-- Mobile menu -->
       <details class="relative md:hidden">
-        <summary class="flex size-9 cursor-pointer list-none items-center justify-center rounded-lg text-text-sub hover:text-text [&::-webkit-details-marker]:hidden" aria-label="Menu">
-          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <summary class="flex size-9 cursor-pointer list-none items-center justify-center rounded-lg text-text-sub hover:text-text [&::-webkit-details-marker]:hidden" aria-label="選單">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
         </summary>
-        <div class="absolute right-0 top-full z-50 mt-2 w-64 rounded-xl border border-border bg-card p-2 shadow-lg">
-          {
-            navGroups.map((group) => (
-              <div class="py-1">
-                <p class="px-3 pb-1 pt-2 text-xs font-medium uppercase tracking-widest text-text-sub">{group.label}</p>
-                <ul>
-                  {group.items.map((item) => (
-                    <li>
-                      <a href={item.href} class={menuItem} target="_blank" rel="noopener">
-                        <span>{item.label}</span><ExternalIcon />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-        </div>
+        <nav class="absolute right-0 top-full z-50 mt-2 w-64 rounded-xl border border-border bg-card p-2 shadow-lg" aria-label="行動版導覽"><CmsMenu items={items} vertical /></nav>
       </details>
     </div>
   </div>

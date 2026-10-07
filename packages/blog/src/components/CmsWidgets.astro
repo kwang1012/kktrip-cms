@@ -1,0 +1,7 @@
+---
+import { WidgetArea } from 'emdash/ui'
+interface Props { name: string }
+---
+<div class="space-y-8 text-sm [&_.widget-area]:space-y-8 [&_.widget__title]:mb-3 [&_.widget__title]:font-semibold [&_.widget__content]:space-y-2 [&_ul]:space-y-2 [&_a]:text-text-sub [&_a:hover]:text-accent-deep [&_input]:w-full [&_input]:rounded-lg [&_input]:border [&_input]:border-border [&_input]:bg-card [&_input]:px-3 [&_input]:py-2 [&_button]:rounded-lg [&_button]:bg-accent [&_button]:px-3 [&_button]:py-2 [&_button]:text-white [&_img]:rounded-lg">
+  <WidgetArea name={Astro.props.name} />
+</div>

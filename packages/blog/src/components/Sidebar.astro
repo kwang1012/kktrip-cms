@@ -1,4 +1,5 @@
 ---
+import CmsWidgets from './CmsWidgets.astro'
 import { t } from '../lib/strings'
 
 interface Props {
@@ -36,4 +37,5 @@ const off = 'text-text-sub hover:bg-card hover:text-text'
       }
     </ul>
   </nav>
+  <div class="mt-8"><CmsWidgets name="sidebar" /></div>
 </aside>

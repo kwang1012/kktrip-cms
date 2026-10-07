@@ -1,5 +1,5 @@
 import { beforeEach, expect, it, vi } from 'vitest'
-const api = vi.hoisted(() => ({ getEmDashCollection: vi.fn(), getEmDashEntry: vi.fn() }))
+const api = vi.hoisted(() => ({ getEmDashCollection: vi.fn(), getEmDashEntry: vi.fn(), getSeoMeta: vi.fn() }))
 vi.mock('emdash', () => api)
 import { getPost, getPosts } from './cms'
 

@@ -20,7 +20,10 @@ Astro.response.headers.set('Cache-Control', privateRequest ? 'private, no-store'
 const related = relatedPosts(post, posts, 3)
 ---
 
-<Layout title={post.title} description={post.excerpt || undefined} image={post.image} type="article">
+<Layout title={post.title} seoTitle={post.seo?.title} description={post.seo?.description || post.excerpt || undefined}
+  image={post.seo?.ogImage || post.image} canonical={post.seo?.canonical} robots={post.seo?.robots} type="article"
+  content={{ collection: 'posts', id: post.id, slug: post.slug }}
+  articleMeta={{ publishedTime: post.publishedAt.toISOString(), modifiedTime: post.updatedAt.toISOString(), author: post.author }}>
   <ArticleView post={post} />
   <RelatedPosts posts={related} />
 </Layout>

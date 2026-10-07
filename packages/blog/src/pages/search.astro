@@ -1,0 +1,27 @@
+---
+import { search } from 'emdash'
+import Layout from '../layouts/Layout.astro'
+const query = (Astro.url.searchParams.get('q') || '').trim().slice(0, 200)
+let failed = false
+let results: Awaited<ReturnType<typeof search>>['items'] = []
+try { if (query) results = (await search(query, { collections: ['posts', 'pages'], limit: 30 })).items }
+catch (error) { console.error('[blog] search failed', error); failed = true; Astro.response.status = 503 }
+Astro.response.headers.set('Cache-Control', 'private, no-store')
+---
+<Layout title="搜尋" robots="noindex, follow">
+  <section class="mx-auto max-w-3xl px-4 pt-12 sm:px-6 sm:pt-16">
+    <h1 class="font-serif text-3xl font-bold">搜尋旅誌</h1>
+    <form method="get" action="/search" class="mt-6 flex gap-3">
+      <label for="query" class="sr-only">搜尋文章與頁面</label>
+      <input id="query" type="search" name="q" value={query} maxlength="200" placeholder="搜尋文章與頁面" class="min-w-0 flex-1 rounded-lg border border-border bg-card px-4 py-3" />
+      <button class="rounded-lg bg-accent px-5 py-3 font-medium text-white">搜尋</button>
+    </form>
+    {failed ? <p class="mt-8 text-text-sub">暫時無法搜尋，請稍後再試。</p> : query && <p class="mt-8 text-text-sub">找到 {results.length} 個結果</p>}
+    <ol class="mt-8 divide-y divide-border">
+      {results.map(result => <li class="py-6">
+        <a href={`/${result.collection}/${encodeURIComponent(result.slug || result.id)}`} class="font-serif text-xl font-bold hover:text-accent-deep">{result.title || '未命名'}</a>
+        {result.snippet && <p class="mt-2 text-text-sub">{result.snippet.replace(/<[^>]*>/g, '')}</p>}
+      </li>)}
+    </ol>
+  </section>
+</Layout>

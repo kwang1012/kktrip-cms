@@ -1,0 +1,17 @@
+---
+import type { MenuItem } from 'emdash'
+interface Props { items: MenuItem[]; vertical?: boolean }
+const { items, vertical = false } = Astro.props
+const link = 'block rounded-lg px-3 py-2 text-sm text-text-sub transition-colors hover:bg-accent-soft hover:text-accent-deep'
+---
+<ul class:list={['gap-1', vertical ? 'space-y-1' : 'flex items-center']}>
+  {items.map(item => <li>
+    {item.children.length ? <details class="relative">
+      <summary class={`${link} cursor-pointer`}>{item.label}</summary>
+      <div class:list={['rounded-xl border border-border bg-card p-2', !vertical && 'absolute left-0 top-full z-50 min-w-56 shadow-lg']}>
+        <Astro.self items={item.children} vertical />
+      </div>
+    </details> : <a href={item.url} target={item.target} rel={item.target === '_blank' ? 'noopener noreferrer' : undefined} title={item.titleAttr}
+      aria-current={Astro.url.pathname === item.url ? 'page' : undefined} class={link}>{item.label}</a>}
+  </li>)}
+</ul>

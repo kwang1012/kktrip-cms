@@ -1,0 +1,26 @@
+---
+import { getTerm, getEmDashCollection } from 'emdash'
+import Layout from '../../layouts/Layout.astro'
+import PostCard from '../../components/PostCard.astro'
+import { normalizeEmDashPost } from '../../lib/emdash-post'
+const slug = decodeURIComponent(Astro.params.slug || '')
+const term = await getTerm('category', slug)
+if (!term) return Astro.rewrite('/404')
+const entries = []
+let cursor: string | undefined
+ do {
+  const result = await getEmDashCollection('posts', { status: 'published', where: { category: slug }, limit: 100, cursor })
+  if (result.error) return new Response('暫時無法載入文章', { status: 503 })
+  entries.push(...result.entries); cursor = result.nextCursor
+} while (cursor)
+const posts = entries.map(entry => normalizeEmDashPost(entry)).filter(post => post !== null)
+---
+<Layout title={term.label} description={term.description}>
+  <section class="mx-auto max-w-6xl px-4 pt-12 sm:px-6 sm:pt-16">
+    <a href="/" class="text-sm text-text-sub hover:text-text">← 所有文章</a>
+    <h1 class="mt-6 font-serif text-3xl font-bold">{term.label}</h1>
+    {term.description && <p class="mt-3 text-text-sub">{term.description}</p>}
+    <div class="mt-10 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">{posts.map(post => <PostCard post={post} />)}</div>
+    {!posts.length && <p class="mt-10 text-text-sub">還沒有發佈的文章，敬請期待。</p>}
+  </section>
+</Layout>
