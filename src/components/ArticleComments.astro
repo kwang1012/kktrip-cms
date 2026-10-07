@@ -5,7 +5,7 @@ interface Props { contentId: string }
 const { contentId } = Astro.props
 const enabled = (await getCollectionInfo('posts'))?.commentsEnabled ?? false
 ---
-{enabled && <section data-article-comments class="mt-12 border-t border-border pt-8 [--ec-form-bg:var(--card)] [--ec-form-border:var(--border)] [--ec-form-color:var(--text)] [--ec-form-submit-bg:var(--accent)] [--ec-form-submit-color:white]">
+{enabled && <section data-article-comments class="mt-12 border-t border-border pt-8 [--ec-form-user-bg:var(--card)] [--ec-form-user-bg-dark:var(--card)] [--ec-form-user-border:var(--border)] [&_.ec-comment-user-info]:flex-wrap [&_.ec-comment-user-info]:text-text [&_.ec-comment-user-email]:break-all [--ec-form-bg:var(--card)] [--ec-form-border:var(--border)] [--ec-form-color:var(--text)] [--ec-form-submit-bg:var(--accent)] [--ec-form-submit-color:white]">
   <h2 class="font-serif text-2xl font-bold">留言討論</h2>
   <p class="mt-3 mb-6 text-sm leading-6 text-text-sub">分享你的想法。留言審核通過後會公開，電子郵件不會顯示。</p>
   <Comments collection="posts" contentId={contentId} threaded />
