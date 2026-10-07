@@ -1,20 +1,32 @@
-import { toPosts } from './normalize'
-import type { CmsItem, Post } from './post-types'
+import { getEmDashCollection, getEmDashEntry } from 'emdash'
+import { normalizeEmDashPost } from './emdash-post'
+import type { Post } from './post-types'
 
-const CMS_URL = (import.meta.env.PUBLIC_CMS_URL || 'https://cms.kktrip.app').replace(/\/+$/, '')
-
-/** Fetch every published post. Throws on a failed request so pages can show an error state. */
+/** Query published revisions from the local CMS, including all cursor pages. */
 export async function getPosts(): Promise<Post[]> {
-  // The CMS defaults to 50 items; ask for the maximum so older posts never drop off.
-  const res = await fetch(`${CMS_URL}/api/collections/blog-posts/content?limit=1000`, {
-    headers: { Accept: 'application/json' },
-  })
-  if (!res.ok) throw new Error(`CMS responded ${res.status}`)
-  const json = (await res.json()) as { data?: CmsItem[] }
-  return toPosts(json.data ?? [], CMS_URL)
+  const posts: Post[] = []
+  let cursor: string | undefined
+  do {
+    const result = await getEmDashCollection('posts', {
+      status: 'published', orderBy: { published_at: 'desc' }, limit: 100, cursor,
+    })
+    if (result.error) throw result.error
+    for (const entry of result.entries) {
+      const post = normalizeEmDashPost(entry)
+      if (post) posts.push(post)
+    }
+    cursor = result.nextCursor
+  } while (cursor)
+  return posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
 }
 
-/** Tags sorted by how many posts use them. */
+/** EmDash validates preview access before returning an unpublished entry. */
+export async function getPost(slug: string): Promise<Post | null> {
+  const result = await getEmDashEntry('posts', slug)
+  if (result.error) throw result.error
+  return result.entry ? normalizeEmDashPost(result.entry, true) : null
+}
+
 export function tagCounts(posts: Post[]): { tag: string; count: number }[] {
   const counts = new Map<string, number>()
   for (const post of posts) for (const tag of post.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1)

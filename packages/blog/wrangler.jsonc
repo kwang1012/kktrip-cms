@@ -1,10 +1,45 @@
 {
-  "name": "kktrip-blog",
-  "main": "dist/_worker.js/index.js",
-  "compatibility_date": "2026-02-03",
-  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-  "assets": { "binding": "ASSETS", "directory": "./dist" },
-  "routes": [{ "pattern": "news.kktrip.app", "custom_domain": true }],
-  "observability": { "enabled": true },
-  "vars": { "PUBLIC_CMS_URL": "https://cms.kktrip.app" }
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kktrip-emdash",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kktrip-emdash-db",
+      "database_id": "f94d42e2-652e-4ba3-b0ce-a8cb5f9cc753"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "kktrip-emdash-media"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "d71254f45a2b4a1e959b1dca6aad42db"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "news.kktrip.app",
+      "custom_domain": true
+    }
+  ]
 }
