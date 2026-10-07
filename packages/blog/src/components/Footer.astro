@@ -1,0 +1,35 @@
+---
+import AppStoreBadge from './AppStoreBadge.astro'
+import ExternalIcon from './ExternalIcon.astro'
+import { APP_URL } from '../lib/site'
+import { t } from '../lib/strings'
+---
+
+<footer class="mt-28 border-t border-border">
+  <div class="grid gap-10 px-4 py-12 sm:grid-cols-3 sm:px-6 lg:px-8">
+    <div>
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="/favicon-32x32.png" alt="" width="24" height="24" class="rounded-md" />
+        <span class="font-serif text-base font-bold tracking-tight">{t.siteName}</span>
+      </a>
+      <p class="mt-3 max-w-xs text-sm leading-7 text-text-sub">{t.footerBlurb}</p>
+    </div>
+    <div class="text-sm">
+      <h2 class="mb-3 text-xs font-medium uppercase tracking-widest text-text-sub">{t.explore}</h2>
+      <ul class="space-y-2 text-text-sub">
+        <li><a href="/" class="hover:text-text">{t.allPosts}</a></li>
+        <li><a href={`/tag/${encodeURIComponent(t.news)}`} class="hover:text-text">{t.news}</a></li>
+        <li><a href="/rss.xml" class="hover:text-text">{t.rss}</a></li>
+        <li><a href={APP_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-text">{t.openApp}<ExternalIcon /></a></li>
+      </ul>
+    </div>
+    <div class="sm:justify-self-end">
+      <AppStoreBadge height={40} />
+    </div>
+  </div>
+  <div class="border-t border-border">
+    <div class="px-4 py-5 text-xs text-text-sub sm:px-6 lg:px-8">
+      © {new Date().getFullYear()} KK Trip
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,129 @@
+---
+import TagList from './TagList.astro'
+import Toc from './Toc.astro'
+import Share from './Share.astro'
+import Avatar from './Avatar.astro'
+import type { Post } from '../lib/post-types'
+import { addHeadingIds } from '../lib/toc'
+import { formatDate, readingMinutes } from '../lib/format'
+import { t } from '../lib/strings'
+
+interface Props {
+  post: Post
+}
+
+const { post } = Astro.props
+const { html, toc } = addHeadingIds(post.contentHtml)
+const url = new URL(`/posts/${encodeURIComponent(post.slug)}`, Astro.site).toString()
+---
+
+<div id="read-progress" class="fixed inset-x-0 top-16 z-30 h-0.5 origin-left scale-x-0 bg-accent" aria-hidden="true"></div>
+
+<article class="mx-auto max-w-360 px-4 pt-10 sm:px-6 sm:pt-28 lg:grid lg:grid-cols-[13rem_minmax(0,43rem)_13rem] lg:justify-center lg:gap-x-16 lg:px-8">
+  <!-- Left column: back link + share (sticky on large screens) -->
+  <aside class="hidden lg:block">
+    <div class="sticky top-28">
+      <a href="/" class="text-sm text-text-sub hover:text-text">← {t.allPosts}</a>
+      <Share url={url} title={post.title} class="mt-50" />
+    </div>
+  </aside>
+
+  <!-- Reading column -->
+  <div class="min-w-0">
+    <a href="/" class="text-sm text-text-sub hover:text-text lg:hidden">← {t.allPosts}</a>
+
+    <header class="mt-6 lg:mt-0">
+      <p class="text-sm text-text-sub">
+        <time datetime={post.publishedAt.toISOString()}>{t.publishedOn(formatDate(post.publishedAt))}</time>
+        {
+          post.tags[0] && (
+            <>
+              <span aria-hidden="true"> · </span>
+              <a href={`/tag/${encodeURIComponent(post.tags[0])}`} class="underline underline-offset-4 hover:text-text">
+                {post.tags[0]}
+              </a>
+            </>
+          )
+        }
+        <span aria-hidden="true"> · </span>{t.readMin(readingMinutes(post.contentHtml))}
+      </p>
+      <h1 class="mt-4 font-serif text-3xl font-bold leading-tight tracking-tight sm:text-[2.75rem] sm:leading-tight">
+        {post.title}
+      </h1>
+      {post.excerpt && <p class="mt-5 text-lg leading-8 text-text-sub">{post.excerpt}</p>}
+      {
+        post.author && (
+          <div class="mt-6 flex items-center gap-3 text-sm">
+            <Avatar name={post.author} size={36} />
+            <span class="font-medium">{t.by(post.author)}</span>
+          </div>
+        )
+      }
+    </header>
+
+    {
+      post.image && (
+        <img
+          src={post.image}
+          alt=""
+          decoding="async"
+          class="mt-10 aspect-video w-full rounded-xl border border-border object-cover"
+        />
+      )
+    }
+
+    <div class="prose prose-lg prose-post mt-10 max-w-none" set:html={html} />
+
+    <div class="mt-12 border-t border-border pt-6">
+      <TagList tags={post.tags} />
+    </div>
+
+    <Share url={url} title={post.title} class="mt-10 lg:mt-12" />
+
+  </div>
+
+  <!-- Right column: contents -->
+  <aside class="hidden lg:block">
+    <div class="sticky top-28">
+      <Toc items={toc} />
+    </div>
+  </aside>
+</article>
+
+<script is:inline>
+  (function () {
+    var bar = document.getElementById('read-progress')
+    function onScroll() {
+      var h = document.documentElement
+      var max = h.scrollHeight - h.clientHeight
+      if (bar && max > 0) bar.style.transform = 'scaleX(' + Math.min(1, h.scrollTop / max) + ')'
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+
+    var links = Array.prototype.slice.call(document.querySelectorAll('[data-toc-link]'))
+    if (links.length && 'IntersectionObserver' in window) {
+      var map = {}
+      links.forEach(function (a) { map[decodeURIComponent(a.getAttribute('href').slice(1))] = a })
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return
+          links.forEach(function (a) { a.classList.remove('text-text', 'border-accent'); a.classList.add('border-transparent') })
+          var a = map[e.target.id]
+          if (a) { a.classList.add('text-text', 'border-accent'); a.classList.remove('border-transparent') }
+        })
+      }, { rootMargin: '-80px 0px -70% 0px' })
+      Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el) })
+    }
+
+    document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var label = btn.textContent
+        navigator.clipboard.writeText(location.href).then(function () {
+          btn.textContent = btn.getAttribute('data-copied')
+          setTimeout(function () { btn.textContent = label }, 1800)
+        })
+      })
+    })
+  })()
+</script>

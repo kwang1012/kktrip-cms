@@ -1,0 +1,10 @@
+{
+  "name": "kktrip-blog",
+  "main": "dist/_worker.js/index.js",
+  "compatibility_date": "2026-02-03",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "binding": "ASSETS", "directory": "./dist" },
+  "routes": [{ "pattern": "news.kktrip.app", "custom_domain": true }],
+  "observability": { "enabled": true },
+  "vars": { "PUBLIC_CMS_URL": "https://cms.kktrip.app" }
+}

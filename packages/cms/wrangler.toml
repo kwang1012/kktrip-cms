@@ -1,4 +1,4 @@
-name = "flare-cms-dev"
+name = "kktrip-cms-dev"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
@@ -9,25 +9,25 @@ workers_dev = true
 # D1 Database
 [[d1_databases]]
 binding = "DB"
-database_name = "my-astro-cms-db"
-database_id = "a2fe8bde-3cb8-4c0b-8a66-a996c482e5a3"
+database_name = "kktrip-cms-db"
+database_id = "982ac383-75ca-4ff7-ab01-e11ab3561578"
 migrations_dir = "./node_modules/@flare-cms/core/migrations"
 
 # R2 Bucket for media storage
 [[r2_buckets]]
 binding = "MEDIA_BUCKET"
-bucket_name = "my-astro-cms-media"
+bucket_name = "kktrip-cms-media"
 
 # KV Namespace for rate limiting cache
 [[kv_namespaces]]
 binding = "CACHE_KV"
-id = "7dacbabdf6aa4896b0c9b0bc7b9125fe"
+id = "59bb887c0c5e4da290d9092d956d8152"
 
 # Environment variables
 [vars]
 ENVIRONMENT = "development"
 CORS_ORIGINS = "http://localhost:4321,http://localhost:8787"
-MEDIA_DOMAIN = "images.flarecms.dev"
+MEDIA_DOMAIN = "cms-media.kktrip.app"
 
 # Webhook configuration (Phase 4)
 # Comma-separated URLs to POST on content publish/unpublish events
@@ -40,26 +40,27 @@ WEBHOOK_SECRET = ""
 
 # Production environment
 [env.production]
-name = "flare-cms"
-vars = { ENVIRONMENT = "production", CORS_ORIGINS = "https://flare-site.pages.dev", WEBHOOK_URLS = "", WEBHOOK_SECRET = "" }
+name = "kktrip-cms"
+vars = { ENVIRONMENT = "production", CORS_ORIGINS = "https://news.kktrip.app", MEDIA_DOMAIN = "cms-media.kktrip.app", WEBHOOK_URLS = "", WEBHOOK_SECRET = "" }
+routes = [{ pattern = "cms.kktrip.app", custom_domain = true }]
 
 [[env.production.d1_databases]]
 binding = "DB"
-database_name = "my-astro-cms-db"
-database_id = "a2fe8bde-3cb8-4c0b-8a66-a996c482e5a3"
+database_name = "kktrip-cms-db"
+database_id = "982ac383-75ca-4ff7-ab01-e11ab3561578"
 migrations_dir = "./node_modules/@flare-cms/core/migrations"
 
 [[env.production.r2_buckets]]
 binding = "MEDIA_BUCKET"
-bucket_name = "my-astro-cms-media"
+bucket_name = "kktrip-cms-media"
 
 [[env.production.kv_namespaces]]
 binding = "CACHE_KV"
-id = "7dacbabdf6aa4896b0c9b0bc7b9125fe"
+id = "59bb887c0c5e4da290d9092d956d8152"
 
 # Staging environment (migration testing)
 [env.staging]
-name = "flare-cms-staging"
+name = "kktrip-cms-staging"
 vars = { ENVIRONMENT = "staging", CORS_ORIGINS = "http://localhost:4321,http://localhost:8787" }
 
 [[env.staging.kv_namespaces]]
@@ -68,12 +69,12 @@ id = "deeb721cb0e5460ca410222fef5af184"
 
 [[env.staging.d1_databases]]
 binding = "DB"
-database_name = "my-astro-cms-db-staging"
+database_name = "kktrip-cms-db-staging"
 database_id = "83d65e82-86dd-4c43-8494-60f50e4c0053"
 
 [[env.staging.r2_buckets]]
 binding = "MEDIA_BUCKET"
-bucket_name = "my-astro-cms-media"
+bucket_name = "kktrip-cms-media"
 
 # Cron triggers for scheduled content publishing
 [triggers]

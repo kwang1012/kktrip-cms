@@ -1,0 +1,23 @@
+---
+interface Props {
+  class?: string
+}
+
+const { class: className = 'h-3.5 w-3.5' } = Astro.props
+---
+
+<!-- Square with an arrow leaving it: marks a link that goes to another site. -->
+<svg
+  viewBox="0 0 24 24"
+  class:list={['inline-block shrink-0 opacity-60', className]}
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+  <path d="m21 3-9 9"></path>
+  <path d="M15 3h6v6"></path>
+</svg>

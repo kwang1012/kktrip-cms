@@ -37,7 +37,7 @@ function logStep(msg: string) {
 // ---------------------------------------------------------------------------
 
 async function authenticate(baseUrl: string): Promise<string> {
-  const email = process.env.FLARE_ADMIN_EMAIL ?? 'jjaimealeman@gmail.com'
+  const email = process.env.FLARE_ADMIN_EMAIL ?? 'kk@kktrip.app'
   const password = process.env.FLARE_ADMIN_PASSWORD ?? ''
 
   logStep(`Authenticating as ${email}...`)

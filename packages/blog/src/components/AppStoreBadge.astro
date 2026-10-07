@@ -1,0 +1,21 @@
+---
+import { APP_STORE_URL } from '../lib/site'
+
+interface Props {
+  /** Rendered height in px; Apple requires the badge keep its proportions. */
+  height?: number
+  class?: string
+}
+
+const { height = 44, class: className } = Astro.props
+---
+
+<!-- Apple's official badge artwork, unmodified (tools.applemediaservices.com). -->
+<a href={APP_STORE_URL} target="_blank" rel="noopener" class:list={['inline-block shrink-0', className]}>
+  <img
+    src="/app-store-badge-black.svg"
+    alt="在 App Store 下載 KK Trip"
+    height={height}
+    style={`height:${height}px;width:auto`}
+  />
+</a>

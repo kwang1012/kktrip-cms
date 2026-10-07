@@ -5,7 +5,7 @@
   "description": "Flare CMS backend - Cloudflare Worker application",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --config wrangler.toml",
     "deploy": "wrangler deploy --env production",
     "db:migrate": "wrangler d1 migrations apply DB",
     "db:migrate:local": "wrangler d1 migrations apply DB --local",
@@ -32,7 +32,7 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.15",
-    "wrangler": "^4.52.1",
+    "wrangler": "^4.147.0",
     "zod": "^4.1.13"
   },
   "engines": {

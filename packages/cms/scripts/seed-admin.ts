@@ -11,13 +11,13 @@ import { getPlatformProxy } from 'wrangler'
  * npm run seed
  *
  * Admin credentials:
- * Email: jjaimealeman@gmail.com
+ * Email: kk@kktrip.app
  * Password: [as entered during setup]
  */
 
 async function seed() {
   // Get D1 database from Cloudflare environment using wrangler's getPlatformProxy
-  const { env, dispose } = await getPlatformProxy()
+  const { env, dispose } = await getPlatformProxy({ configPath: 'wrangler.toml' })
 
   if (!env?.DB) {
     console.error('❌ Error: DB binding not found')
@@ -37,12 +37,12 @@ async function seed() {
     const existingUser = await db
       .select()
       .from(users)
-      .where(eq(users.email, 'jjaimealeman@gmail.com'))
+      .where(eq(users.email, 'kk@kktrip.app'))
       .get()
 
     if (existingUser) {
       console.log('✓ Admin user already exists')
-      console.log(`  Email: jjaimealeman@gmail.com`)
+      console.log(`  Email: kk@kktrip.app`)
       console.log(`  Role: ${existingUser.role}`)
       return
     }
@@ -58,8 +58,8 @@ async function seed() {
       .insert(users)
       .values({
         id: odid,
-        email: 'jjaimealeman@gmail.com',
-        username: 'jjaimealeman',
+        email: 'kk@kktrip.app',
+        username: 'kk',
         firstName: 'Admin',
         lastName: 'User',
         passwordHash: passwordHash,
@@ -71,7 +71,7 @@ async function seed() {
       .run()
 
     console.log('✓ Admin user created successfully')
-    console.log(`  Email: jjaimealeman@gmail.com`)
+    console.log(`  Email: kk@kktrip.app`)
     console.log(`  Role: admin`)
     console.log('')
     console.log('You can now login at: http://localhost:8787/auth/login')

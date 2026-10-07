@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string
+  size?: number
+}
+
+const { name, size = 28 } = Astro.props
+const isTeam = /kk\s*trip/i.test(name)
+const initial = [...name.trim()][0] ?? '?'
+---
+
+{
+  isTeam ? (
+    <img src="/favicon-32x32.png" alt="" width={size} height={size} class="shrink-0 rounded-full" style={`width:${size}px;height:${size}px`} />
+  ) : (
+    <span
+      aria-hidden="true"
+      class="inline-flex shrink-0 items-center justify-center rounded-full bg-accent-soft font-medium text-accent-deep"
+      style={`width:${size}px;height:${size}px;font-size:${Math.round(size * 0.45)}px`}
+    >
+      {initial}
+    </span>
+  )
+}

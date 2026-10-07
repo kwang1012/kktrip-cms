@@ -1,0 +1,31 @@
+---
+import ExternalIcon from './ExternalIcon.astro'
+
+interface Props {
+  href: string
+  variant?: 'primary' | 'secondary'
+  size?: 'sm' | 'md'
+  class?: string
+  /** Show the external-link icon on off-site links (default true). */
+  icon?: boolean
+}
+
+const { href, variant = 'primary', size = 'md', class: className, icon = true } = Astro.props
+const external = /^https?:\/\//.test(href)
+---
+
+<a
+  href={href}
+  {...external ? { target: '_blank', rel: 'noopener' } : {}}
+  class:list={[
+    'inline-flex items-center justify-center rounded-full font-medium transition-colors',
+    size === 'sm' ? 'px-4 py-1.5 text-sm' : 'px-6 py-3 text-base',
+    variant === 'primary'
+      ? 'bg-accent text-white hover:bg-accent-deep'
+      : 'border border-border-strong text-text hover:border-accent hover:text-accent-deep',
+    className,
+  ]}
+>
+  <slot />
+  <!-- {external && icon && <ExternalIcon class="ml-1.5 h-3.5 w-3.5" />} -->
+</a>
