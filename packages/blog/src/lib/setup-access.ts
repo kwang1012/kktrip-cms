@@ -2,11 +2,17 @@
 export function setupAccess(request: Request, key?: string): Response | undefined {
   if (!key) return
   const url = new URL(request.url)
+  let pathname: string
+  try {
+    pathname = decodeURIComponent(url.pathname)
+  } catch {
+    return denied()
+  }
   const cookie = request.headers.get('cookie')?.split(';').some(
     (part) => part.trim() === `kktrip_setup=${key}`,
   )
   const authorized = cookie || request.headers.get('authorization') === `Bearer ${key}`
-  if (url.pathname === '/_emdash/setup-access') {
+  if (pathname === '/_emdash/setup-access') {
     if (url.searchParams.get('key') !== key) return denied()
     return new Response(null, {
       status: 303,
@@ -18,8 +24,8 @@ export function setupAccess(request: Request, key?: string): Response | undefine
       },
     })
   }
-  if ((url.pathname.startsWith('/_emdash/api/setup') ||
-       url.pathname.startsWith('/_emdash/admin/setup')) && !authorized) return denied()
+  if ((pathname.startsWith('/_emdash/api/setup') ||
+       pathname.startsWith('/_emdash/admin/setup')) && !authorized) return denied()
 }
 
 function denied(): Response {

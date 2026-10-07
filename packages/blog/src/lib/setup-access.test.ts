@@ -6,6 +6,7 @@ describe('production setup access', () => {
     expect(setupAccess(new Request('https://news.kktrip.app/posts/example'), 'secret')).toBeUndefined()
     expect(setupAccess(new Request('https://news.kktrip.app/_emdash/api/setup/admin'), 'secret')?.status).toBe(403)
     expect(setupAccess(new Request('https://news.kktrip.app/_emdash/admin/setup'), 'secret')?.status).toBe(403)
+    expect(setupAccess(new Request('https://news.kktrip.app/_emdash/api/%73etup/admin'), 'secret')?.status).toBe(403)
   })
   it('accepts the private link and binds subsequent requests to a secure cookie', () => {
     const response = setupAccess(new Request('https://news.kktrip.app/_emdash/setup-access?key=secret'), 'secret')
