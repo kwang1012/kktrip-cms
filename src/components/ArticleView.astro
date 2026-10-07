@@ -1,4 +1,5 @@
 ---
+import ArticleComments from './ArticleComments.astro'
 import CmsWidgets from './CmsWidgets.astro'
 import Byline from './Byline.astro'
 import { tagHref } from '../lib/editorial'
@@ -80,6 +81,7 @@ const url = new URL(`/posts/${encodeURIComponent(post.slug)}`, Astro.site).toStr
     </div>
 
     <Share url={url} title={post.title} class="mt-10 lg:mt-12" />
+    <ArticleComments contentId={post.id} />
 
   </div>
 

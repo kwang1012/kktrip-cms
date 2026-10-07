@@ -1,0 +1,38 @@
+diff --git a/dist/index.js b/dist/index.js
+index 5ed5f0b7d992686b02e1008608009d65c2f061c4..650c6a0cff8eb1eaecdd1045482726ee569672dc 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -18491,7 +18491,7 @@ function mediaItemToImageFieldValue(item) {
+ 		} : item.meta
+ 	};
+ }
+-function ImageFieldRenderer({ id, label, description, value, onChange, required, allowedMimeTypes, fieldId, variant = "default", darkVariant = false }) {
++function ImageFieldRenderer({ id, label, description, value, onChange, required, allowedMimeTypes, fieldId, variant = "default", darkVariant = false, compact = false }) {
+ 	const { _: _t } = useLingui();
+ 	const [pickerOpen, setPickerOpen] = React$1.useState(false);
+ 	const [pickerTarget, setPickerTarget] = React$1.useState("image");
+@@ -18922,7 +18922,7 @@ function ImageFieldRenderer({ id, label, description, value, onChange, required,
+ 					src: displayUrl,
+ 					alt: "",
+ 					className: "emdash-media-transparency-grid max-h-48 min-h-20 rounded-lg border object-cover",
+-					style: { objectPosition },
++					style: compact ? { width: 96, height: 96, objectPosition } : { objectPosition },
+ 					onError: () => setImageBroken(true)
+ 				}), primaryActions]
+ 			}) : isFeatured ? /* @__PURE__ */ jsx(ImageDropTarget, {
+@@ -70178,6 +70178,7 @@ function BylineAvatarField({ value, onChange }) {
+ 		meta: media.storageKey ? { storageKey: media.storageKey } : void 0
+ 	} : void 0;
+ 	return /* @__PURE__ */ jsx(ImageFieldRenderer, {
++		compact: true,
+ 		label: _t({
+ 			id: "kfcRb0",
+ 			message: "Avatar"
+@@ -70789,6 +70790,7 @@ function BylinesPage() {
+ 					children: /* @__PURE__ */ jsxs("form", {
+ 						onSubmit: submitForm,
+ 						className: "flex min-h-0 flex-1 flex-col",
++						style: { maxHeight: "inherit" },
+ 						children: [
+ 							/* @__PURE__ */ jsxs("div", {
+ 								className: "flex shrink-0 items-start justify-between gap-4 border-b border-kumo-line px-6 py-5",

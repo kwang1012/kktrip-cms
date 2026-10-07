@@ -58,7 +58,8 @@
           "label": "Original update date",
           "type": "datetime"
         }
-      ]
+      ],
+      "commentsEnabled": true
     },
     {
       "slug": "pages",

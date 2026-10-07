@@ -116,3 +116,15 @@ seed defaults.
 
 The template integration is adapted from the MIT-licensed EmDash blog template;
 see `THIRD_PARTY_NOTICES.md`.
+
+Article comments use native EmDash threaded comments. Apply the comment policy
+on existing and fresh installations:
+
+```sh
+pnpm exec wrangler d1 execute kktrip-emdash-db --remote --file migrations/20261006_enable_comments.sql
+```
+
+Every submission, including signed-in users, awaits approval in **Admin → Comments**.
+Only approved comments appear publicly; email addresses remain private. The pnpm
+patch in `patches/` bounds the byline dialog form and uses a compact avatar preview.
+Recheck this patch when upgrading EmDash admin.
