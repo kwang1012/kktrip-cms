@@ -1,5 +1,6 @@
 import { toHTML } from '@portabletext/to-html'
 import { imageUrl, toDate } from './content-values'
+import { importedCovers } from './seed-media'
 import { terms, credits } from './editorial'
 import type { Post } from './post-types'
 
@@ -13,6 +14,7 @@ export function mediaUrl(value: unknown): string | null {
     if (direct) return direct
     const meta = media.meta as Record<string, unknown> | undefined
     const key = string(meta?.storageKey)
+    if (importedCovers[key]) return importedCovers[key]
     if (key) return '/_emdash/api/media/file/' + key.split('/').map(encodeURIComponent).join('/')
   }
   return imageUrl(value)

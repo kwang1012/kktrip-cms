@@ -2,6 +2,17 @@
 import { WidgetArea } from 'emdash/ui'
 interface Props { name: string }
 ---
-<div class="space-y-8 text-sm [&_.widget-area]:space-y-8 [&_.widget__title]:mb-3 [&_.widget__title]:font-semibold [&_.widget__content]:space-y-2 [&_ul]:space-y-2 [&_a]:text-text-sub [&_a:hover]:text-accent-deep [&_input]:w-full [&_input]:rounded-lg [&_input]:border [&_input]:border-border [&_input]:bg-card [&_input]:px-3 [&_input]:py-2 [&_button]:rounded-lg [&_button]:bg-accent [&_button]:px-3 [&_button]:py-2 [&_button]:text-white [&_img]:rounded-lg">
+<div class="space-y-8 text-sm [&_.widget-area]:space-y-8 [&_.widget>h3]:mb-4 [&_.widget>h3]:text-xs [&_.widget>h3]:font-semibold [&_.widget>h3]:tracking-wider [&_.widget>h3]:text-text-sub [&_.widget>div]:space-y-3 [&_ul]:space-y-3 [&_li]:flex [&_li]:items-center [&_li]:justify-between [&_li]:gap-3 [&_a]:text-text-sub [&_a:hover]:text-accent-deep [&_li>span]:text-xs [&_li>span]:text-text-sub [&_img]:rounded-lg [&_.widget-search]:flex [&_.widget-search]:gap-2 [&_.widget-search>input]:min-w-0 [&_.widget-search>input]:flex-1 [&_.widget-search>input]:rounded-xl [&_.widget-search>input]:border [&_.widget-search>input]:border-border [&_.widget-search>input]:bg-card [&_.widget-search>input]:px-3 [&_.widget-search>input]:py-3 [&_.widget-search>button]:shrink-0 [&_.widget-search>button]:rounded-xl [&_.widget-search>button]:bg-accent [&_.widget-search>button]:px-4 [&_.widget-search>button]:text-sm [&_.widget-search>button]:font-medium [&_.widget-search>button]:text-white">
   <WidgetArea name={Astro.props.name} />
 </div>
+<script>
+  function localizeSearch() {
+    document.querySelectorAll<HTMLFormElement>('.widget-search').forEach(form => {
+      form.querySelector('input')?.setAttribute('aria-label', '搜尋文章')
+      const button = form.querySelector('button')
+      if (button) button.textContent = '搜尋'
+    })
+  }
+  localizeSearch()
+  document.addEventListener('astro:page-load', localizeSearch)
+</script>

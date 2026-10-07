@@ -21,6 +21,9 @@ describe('EmDash article mapping', () => {
   it('resolves uploaded media without the old CMS', () => {
     expect(mediaUrl({ meta: { storageKey: 'uploads/a b.png' } })).toBe('/_emdash/api/media/file/uploads/a%20b.png')
   })
+  it('uses bundled imported covers without requiring a local R2 copy', () => {
+    expect(mediaUrl({ meta: { storageKey: '01M4A59NM98NS683KV67E67JY7.png' } })).toBe('/migrated-media/cab07be1-0722-47cb-9c86-c668b2c47f1e.png')
+  })
   it('escapes HTML and unsafe links', () => {
     expect(contentHtml([block('<script>alert(1)</script>')])).toContain('&lt;script&gt;')
     const linked = { ...block('click'), markDefs: [{ _key: 'a', _type: 'link', href: 'javascript:alert(1)' }], children: [{ _type: 'span', text: 'click', marks: ['a'] }] }

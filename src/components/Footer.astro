@@ -2,32 +2,26 @@
 import AppStoreBadge from './AppStoreBadge.astro'
 import CmsMenu from './CmsMenu.astro'
 import CmsWidgets from './CmsWidgets.astro'
-import { navigation, siteIdentity } from '../lib/chrome'
-import { t } from '../lib/strings'
-const [items, identity] = await Promise.all([navigation('footer'), siteIdentity()])
+import { navigation } from '../lib/chrome'
+const items = await navigation('footer')
 ---
-
-<footer class="mt-28 border-t border-border">
-  <div class="grid gap-10 px-4 py-12 sm:grid-cols-3 sm:px-6 lg:px-8">
-    <div>
-      <a href="/" class="flex items-center gap-2.5">
-        <img src="/favicon-32x32.png" alt="" width="24" height="24" class="rounded-md" />
-        <span class="font-serif text-base font-bold tracking-tight">{identity.title}</span>
-      </a>
-      <p class="mt-3 max-w-xs text-sm leading-7 text-text-sub">{identity.tagline}</p>
+<footer class="mt-20 border-t border-border bg-card/40 sm:mt-28">
+  <div class="mx-auto max-w-360 px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+    <div class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+      <div class="max-w-lg">
+        <a href="https://kktrip.app" class="inline-flex items-center gap-3">
+          <img src="/favicon-32x32.png" alt="" width="32" height="32" class="size-8 rounded-lg" />
+          <span class="text-lg font-semibold tracking-tight">KK Trip</span>
+        </a>
+        <p class="mt-4 font-serif text-2xl font-semibold leading-snug sm:text-3xl">下一趟旅行，從這裡開始。</p>
+        <p class="mt-3 text-sm leading-7 text-text-sub">找到靈感，和 AI、旅伴一起把旅行準備好。</p>
+      </div>
+      <div class="shrink-0"><AppStoreBadge height={44} /></div>
     </div>
-    <div class="text-sm">
-      <h2 class="mb-3 text-xs font-medium uppercase tracking-widest text-text-sub">{t.explore}</h2>
-      <CmsMenu items={items} vertical />
-      <CmsWidgets name="footer" />
-    </div>
-    <div class="sm:justify-self-end">
-      <AppStoreBadge height={40} />
-    </div>
-  </div>
-  <div class="border-t border-border">
-    <div class="px-4 py-5 text-xs text-text-sub sm:px-6 lg:px-8">
-      © {new Date().getFullYear()} KK Trip
+    <div class="mt-8"><CmsWidgets name="footer" /></div>
+    <div class="mt-8 flex flex-col gap-5 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <nav aria-label="頁尾導覽"><CmsMenu items={items} compact /></nav>
+      <p class="text-xs text-text-sub">© {new Date().getFullYear()} KK Trip</p>
     </div>
   </div>
 </footer>
