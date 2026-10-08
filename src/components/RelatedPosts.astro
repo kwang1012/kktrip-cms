@@ -1,0 +1,25 @@
+---
+import PostCard from './PostCard.astro'
+import type { Post } from '../lib/post-types'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
+
+interface Props {
+  posts: Post[]
+}
+
+const { posts } = Astro.props
+---
+
+{
+  posts.length > 0 && (
+    <section class="mx-auto mt-24 max-w-[90rem] px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-6 border-b border-border pb-3 text-xs font-medium uppercase tracking-widest text-text-sub">
+        {t.related}
+      </h2>
+      <div class="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    </section>
+  )
+}

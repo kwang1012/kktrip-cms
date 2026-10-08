@@ -1,0 +1,31 @@
+---
+import { siteLocale } from '../../lib/locales'
+import Layout from '../../layouts/Layout.astro'
+import ArticleView from '../../components/ArticleView.astro'
+import RelatedPosts from '../../components/RelatedPosts.astro'
+import { CACHE_CONTROL, loadPosts, loadPost } from '../../lib/load'
+import { relatedPosts } from '../../lib/related'
+import { getStrings } from '../../lib/strings'
+const t = getStrings(Astro.currentLocale)
+
+const [{ posts, failed }, { post, failed: postFailed }] = await Promise.all([
+  loadPosts(siteLocale(Astro.currentLocale)), loadPost(Astro.params.slug || '', siteLocale(Astro.currentLocale)),
+])
+
+if (failed || postFailed) {
+  return new Response(t.loadError, { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+}
+if (!post) return Astro.rewrite('/404')
+
+const privateRequest = Astro.request.headers.has('cookie') || Astro.url.search.length > 0
+Astro.response.headers.set('Cache-Control', privateRequest ? 'private, no-store' : CACHE_CONTROL)
+const related = relatedPosts(post, posts, 3)
+---
+
+<Layout title={post.title} seoTitle={post.seo?.title} description={post.seo?.description || post.excerpt || undefined}
+  image={post.seo?.ogImage || post.image} canonical={post.seo?.canonical} robots={post.seo?.robots} type="article"
+  content={{ collection: 'posts', id: post.id, slug: post.slug }}
+  articleMeta={{ publishedTime: post.publishedAt.toISOString(), modifiedTime: post.updatedAt.toISOString(), author: post.author }}>
+  <ArticleView post={post} />
+  <RelatedPosts posts={related} />
+</Layout>

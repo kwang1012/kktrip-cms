@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Warm tokens taken from the KK Trip app (src/index.css there). */
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --border: #e8e0d4;
+  --border-strong: #d6cbbb;
+  --text: #1f1a14;
+  --text-sub: #73675a;
+  --accent: #ea580c;
+  --accent-deep: #c2410c;
+  --accent-soft: #fff1e6;
+  --grid: rgba(31, 26, 20, 0.045);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110d;
+    --card: #1f1a14;
+    --border: rgba(255, 255, 255, 0.11);
+    --border-strong: rgba(255, 255, 255, 0.2);
+    --text: #f3efe8;
+    --text-sub: #a59a8c;
+    --accent: #ff7a2e;
+    --accent-deep: #ff9d3d;
+    --accent-soft: #2a1d12;
+    --grid: rgba(255, 255, 255, 0.04);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-sub: var(--text-sub);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --font-serif: "Noto Serif TC", "Songti TC", Georgia, serif;
+  --font-sans: "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle 48px grid behind the top of every page, faded out with a mask. */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 720px;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent);
+  mask-image: linear-gradient(to bottom, #000 30%, transparent);
+}
+body {
+  position: relative;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Article body: editorial reading column. */
+.prose-post {
+  /* EmDash's table component uses these surface tokens for headers and stripes. */
+  --color-surface: var(--card);
+  --color-bg-subtle: var(--accent-soft);
+  --tw-prose-body: var(--text);
+  --tw-prose-headings: var(--text);
+  --tw-prose-links: var(--accent-deep);
+  --tw-prose-bold: var(--text);
+  --tw-prose-quotes: var(--text-sub);
+  --tw-prose-quote-borders: var(--border-strong);
+  --tw-prose-captions: var(--text-sub);
+  --tw-prose-hr: var(--border);
+  --tw-prose-bullets: var(--accent);
+  --tw-prose-counters: var(--text-sub);
+  --tw-prose-th-borders: var(--border-strong);
+  --tw-prose-td-borders: var(--border);
+}
+.prose-post h1,
+.prose-post h2,
+.prose-post h3 {
+  font-family: var(--font-serif);
+}
+.prose-post {
+  overflow-wrap: anywhere;
+  font-size: 1.0625rem;
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+.prose-post :where(h2) {
+  margin-top: 2.75em;
+  font-size: 1.65rem;
+  line-height: 1.4;
+  scroll-margin-top: 6rem;
+}
+.prose-post :where(h3) {
+  margin-top: 2em;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  scroll-margin-top: 6rem;
+}
+.prose-post :where(blockquote) {
+  font-family: var(--font-serif);
+  font-style: normal;
+  border-left-width: 2px;
+}
+.prose-post :where(figure, img) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.prose-post img {
+  border-radius: 0.75rem;
+}
+.prose-post a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

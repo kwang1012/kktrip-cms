@@ -62,3 +62,9 @@ screenshots/
 
 # Unlighthouse reports
 .unlighthouse/
+
+# EmDash local state and generated types
+worker-configuration.d.ts
+emdash-env.d.ts
+.migration/
+.emdash/

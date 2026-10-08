@@ -1,0 +1,37 @@
+---
+import { siteLocale } from '../lib/locales'
+import Layout from '../layouts/Layout.astro'
+import Sidebar from '../components/Sidebar.astro'
+import PostCard from '../components/PostCard.astro'
+import TagList from '../components/TagList.astro'
+import { tagCounts } from '../lib/cms'
+import { CACHE_CONTROL, loadPosts } from '../lib/load'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
+
+const { posts, failed } = await loadPosts(siteLocale(Astro.currentLocale))
+if (!failed) Astro.response.headers.set('Cache-Control', CACHE_CONTROL)
+const topics = tagCounts(posts)
+---
+
+<Layout>
+  <div class="mx-auto max-w-360 px-4 pt-12 sm:px-6 sm:pt-16 lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:px-8">
+    <Sidebar topics={topics} total={posts.length} />
+
+    <div class="mt-8 min-w-0 lg:mt-0 lg:pl-12">
+      <div class="mb-8 lg:hidden"><TagList tags={topics.map((x) => x.tag)} allLabel={t.allTopics} /></div>
+
+      {
+        failed ? (
+          <p class="py-16 text-text-sub">{t.loadError}</p>
+        ) : posts.length === 0 ? (
+          <p class="py-16 text-text-sub">{t.noPosts}</p>
+        ) : (
+          <div class="grid gap-x-8 gap-y-14 sm:grid-cols-2">
+            {posts.map((post) => <PostCard post={post} />)}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import type { Post } from '../lib/post-types'
+
+interface Props {
+  post: Post
+  /** Tailwind aspect utility, e.g. "aspect-[3/2]". */
+  aspect?: string
+  eager?: boolean
+  class?: string
+}
+
+const { post, aspect = 'aspect-[16/9]', eager = false, class: className } = Astro.props
+// A quiet typographic tile for posts without a cover: first tag, or the wordmark.
+const label = post.tags[0] ?? 'KK Trip'
+---
+
+<div class:list={['relative overflow-hidden rounded-xl border border-border bg-accent-soft', aspect, className]}>
+  {
+    post.image ? (
+      <img
+        src={post.image}
+        alt=""
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      />
+    ) : (
+      <div class="flex h-full w-full items-end p-5">
+        <span class="font-serif text-4xl font-bold leading-none tracking-tight text-accent/40 sm:text-5xl">
+          {label}
+        </span>
+      </div>
+    )
+  }
+</div>

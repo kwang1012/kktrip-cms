@@ -1,6 +1,6 @@
-packages:
-  - 'packages/*'
 allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+patchedDependencies:
+  '@emdash-cms/admin@1.1.0': patches/@emdash-cms__admin@1.1.0.patch

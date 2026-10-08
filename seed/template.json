@@ -1,0 +1,291 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "KK Trip",
+    "description": "KK Trip editorial content and EmDash configuration"
+  },
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "分類",
+      "labelSingular": "分類",
+      "hierarchical": true,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "產品消息",
+          "label": "產品消息"
+        },
+        {
+          "slug": "使用教學",
+          "label": "使用教學"
+        },
+        {
+          "slug": "目的地指南",
+          "label": "目的地指南"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "label": "標籤",
+      "labelSingular": "標籤",
+      "hierarchical": false,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "AI 旅行規劃",
+          "label": "AI 旅行規劃"
+        },
+        {
+          "slug": "使用教學",
+          "label": "使用教學"
+        },
+        {
+          "slug": "公告",
+          "label": "公告"
+        },
+        {
+          "slug": "新聞",
+          "label": "新聞"
+        },
+        {
+          "slug": "產品",
+          "label": "產品"
+        }
+      ]
+    }
+  ],
+  "bylines": [
+    {
+      "id": "kktrip-editorial",
+      "slug": "kktrip",
+      "displayName": "KK Trip",
+      "bio": "KK Trip 編輯團隊：旅行靈感、目的地指南與產品消息。",
+      "websiteUrl": "https://kktrip.app"
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "主要導覽",
+      "items": [
+        {
+          "type": "custom",
+          "label": "旅誌",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "使用教學",
+          "url": "/category/使用教學"
+        },
+        {
+          "type": "custom",
+          "label": "產品消息",
+          "url": "/category/產品消息"
+        },
+        {
+          "type": "custom",
+          "label": "搜尋",
+          "url": "/search"
+        },
+        {
+          "type": "custom",
+          "label": "開啟 KK Trip",
+          "url": "https://kktrip.app",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "頁尾導覽",
+      "items": [
+        {
+          "type": "custom",
+          "label": "所有文章",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "搜尋",
+          "url": "/search"
+        },
+        {
+          "type": "custom",
+          "label": "訂閱 RSS",
+          "url": "/rss.xml"
+        },
+        {
+          "type": "custom",
+          "label": "支援",
+          "url": "https://kktrip.app/support",
+          "target": "_blank"
+        }
+      ]
+    }
+  ],
+  "widgetAreas": [
+    {
+      "name": "sidebar",
+      "label": "旅誌側欄",
+      "widgets": [
+        {
+          "type": "component",
+          "componentId": "core:search",
+          "title": "搜尋旅誌",
+          "props": {
+            "placeholder": "搜尋文章"
+          }
+        },
+        {
+          "type": "component",
+          "componentId": "core:categories",
+          "title": "分類",
+          "props": {
+            "showCount": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "article-sidebar",
+      "label": "文章側欄",
+      "widgets": [
+        {
+          "type": "component",
+          "componentId": "core:recent-posts",
+          "title": "最新文章",
+          "props": {
+            "count": 3,
+            "showDate": false
+          }
+        },
+        {
+          "type": "content",
+          "title": "下一趟旅行",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "app-cta",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "link",
+                  "href": "https://kktrip.app/login"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "app-cta-text",
+                  "text": "用 KK Trip 規劃你的下一趟旅行",
+                  "marks": [
+                    "link"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "頁尾小工具",
+      "widgets": []
+    }
+  ],
+  "sections": [
+    {
+      "slug": "plan-with-kktrip",
+      "title": "用 KK Trip 規劃這趟旅行",
+      "description": "文章結尾的旅行規劃呼籲",
+      "keywords": [
+        "KK Trip",
+        "旅行",
+        "行程"
+      ],
+      "content": [
+        {
+          "_type": "block",
+          "_key": "plan-intro",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "plan-intro-text",
+              "text": "準備好出發了嗎？讓 AI 幫你起個頭，再和旅伴一起把旅行準備好。",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "plan-link",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link",
+              "href": "https://kktrip.app/login"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "plan-link-text",
+              "text": "開始規劃下一趟旅行 →",
+              "marks": [
+                "link"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "slug": "pages",
+      "label": "頁面",
+      "labelSingular": "頁面",
+      "urlPattern": "/pages/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "標題",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "內容",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "摘要",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

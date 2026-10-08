@@ -1,0 +1,37 @@
+---
+import { localePath } from '../lib/locales'
+import { tagHref, type TermLink } from '../lib/editorial'
+interface Props {
+  tags: string[]
+  terms?: TermLink[]
+  active?: string
+  /** Prepend an "all" chip linking home. */
+  allLabel?: string
+}
+
+const { tags, terms, active, allLabel } = Astro.props
+const chip = 'inline-block rounded-full border px-3.5 py-1.5 text-sm transition-colors'
+const on = 'border-text bg-text font-medium text-bg'
+const off = 'border-border-strong text-text-sub hover:border-text hover:text-text'
+---
+
+{
+  (tags.length > 0 || allLabel) && (
+    <ul class="flex flex-wrap gap-2">
+      {allLabel && (
+        <li>
+          <a href={localePath('/', Astro.currentLocale)} class:list={[chip, active === undefined ? on : off]}>
+            {allLabel}
+          </a>
+        </li>
+      )}
+      {tags.map((tag) => (
+        <li>
+          <a href={localePath(tagHref(tag, terms), Astro.currentLocale)} class:list={[chip, tag === active ? on : off]}>
+            {tag}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}

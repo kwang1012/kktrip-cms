@@ -1,0 +1,18 @@
+---
+import { getTranslations } from 'emdash'
+import { LOCALES, localeNames, localePath, siteLocale } from '../lib/locales'
+interface Props { content?: { collection: string; id: string } }
+const { content } = Astro.props
+const current = siteLocale(Astro.currentLocale)
+const links = content
+  ? (await getTranslations(content.collection, content.id)).translations
+      .filter(item => item.status === 'published' && item.slug && LOCALES.includes(item.locale as typeof current))
+      .map(item => ({ locale: siteLocale(item.locale), href: localePath(`/${content.collection}/${item.slug}`, item.locale) }))
+  : LOCALES.map(locale => ({ locale, href: localePath('/', locale) }))
+---
+{links.length > 1 && <details class="relative">
+  <summary class="cursor-pointer list-none rounded-lg px-2 py-2 text-xs text-text-sub hover:text-text [&::-webkit-details-marker]:hidden">{localeNames[current]}</summary>
+  <nav aria-label="Language" class="absolute right-0 top-full mt-2 min-w-32 rounded-xl border border-border bg-card p-2 shadow-lg">
+    {links.map(link => <a href={link.href} hreflang={link.locale} lang={link.locale} aria-current={link.locale === current ? 'page' : undefined} class="block rounded-lg px-3 py-2 text-sm text-text hover:bg-bg">{localeNames[link.locale]}</a>)}
+  </nav>
+</details>}
