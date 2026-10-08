@@ -1,13 +1,15 @@
 ---
+import { siteLocale } from '../lib/locales'
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import PostCard from '../components/PostCard.astro'
 import TagList from '../components/TagList.astro'
 import { tagCounts } from '../lib/cms'
 import { CACHE_CONTROL, loadPosts } from '../lib/load'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
-const { posts, failed } = await loadPosts()
+const { posts, failed } = await loadPosts(siteLocale(Astro.currentLocale))
 if (!failed) Astro.response.headers.set('Cache-Control', CACHE_CONTROL)
 const topics = tagCounts(posts)
 ---

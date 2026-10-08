@@ -1,11 +1,14 @@
 ---
 import '../styles/global.css'
+import { localePath } from '../lib/locales'
+import LanguageSwitcher from '../components/LanguageSwitcher.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { EmDashHead, EmDashBodyStart, EmDashBodyEnd } from 'emdash/ui'
 import { createPublicPageContext } from 'emdash/page'
 import { siteIdentity } from '../lib/chrome'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
 interface Props {
   content?: { collection: string; id: string; slug?: string }
@@ -20,7 +23,7 @@ interface Props {
 }
 
 const { title, description, image = null, type = 'website', content, articleMeta, robots, canonical: customCanonical, seoTitle }  = Astro.props
-const identity = await siteIdentity()
+const identity = await siteIdentity(Astro.currentLocale)
 const fullTitle = seoTitle || (title ? `${title} · ${identity.title}` : identity.title)
 const page = createPublicPageContext({ Astro, kind: content ? 'content' : 'custom', pageType: type,
   title: fullTitle, pageTitle: title || identity.title, description: description || identity.tagline, image, content,
@@ -28,7 +31,7 @@ const page = createPublicPageContext({ Astro, kind: content ? 'content' : 'custo
 ---
 
 <!doctype html>
-<html lang="zh-TW">
+<html lang={Astro.currentLocale || 'zh-TW'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,7 +39,7 @@ const page = createPublicPageContext({ Astro, kind: content ? 'content' : 'custo
     <EmDashHead page={page} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="alternate" type="application/rss+xml" title={t.siteName} href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={t.siteName} href={localePath('/rss.xml', Astro.currentLocale)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +49,9 @@ const page = createPublicPageContext({ Astro, kind: content ? 'content' : 'custo
   </head>
   <body class="min-h-screen flex flex-col">
     <EmDashBodyStart page={page} />
-    <Header />
+    <Header>
+      <LanguageSwitcher content={content} />
+    </Header>
     <main class="min-w-0 flex-1">
       <slot />
     </main>

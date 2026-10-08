@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro'
 import { normalizeEmDashPost } from '../../lib/emdash-post'
 import { siteIdentity } from '../../lib/chrome'
 const slug = decodeURIComponent(Astro.params.slug || '')
-const result = await getEmDashEntry('pages', slug)
+const result = await getEmDashEntry('pages', slug, { locale: Astro.currentLocale })
 if (result.error) return new Response('暫時無法載入頁面', { status: 503 })
 if (!result.entry) return Astro.rewrite('/404')
 const page = normalizeEmDashPost(result.entry, true)

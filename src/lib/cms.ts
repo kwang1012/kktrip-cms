@@ -1,14 +1,15 @@
 import { getEmDashCollection, getEmDashEntry, getSeoMeta } from 'emdash'
 import { normalizeEmDashPost } from './emdash-post'
+import { DEFAULT_LOCALE, localePath } from './locales'
 import type { Post } from './post-types'
 
 /** Query published revisions from the local CMS, including all cursor pages. */
-export async function getPosts(): Promise<Post[]> {
+export async function getPosts(locale = DEFAULT_LOCALE): Promise<Post[]> {
   const posts: Post[] = []
   let cursor: string | undefined
   do {
     const result = await getEmDashCollection('posts', {
-      status: 'published', orderBy: { published_at: 'desc' }, limit: 100, cursor,
+      locale, status: 'published', orderBy: { published_at: 'desc' }, limit: 100, cursor,
     })
     if (result.error) throw result.error
     for (const entry of result.entries) {
@@ -21,11 +22,11 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 /** EmDash validates preview access before returning an unpublished entry. */
-export async function getPost(slug: string): Promise<Post | null> {
-  const result = await getEmDashEntry('posts', slug)
+export async function getPost(slug: string, locale = DEFAULT_LOCALE): Promise<Post | null> {
+  const result = await getEmDashEntry('posts', slug, { locale })
   if (result.error) throw result.error
   const post = result.entry ? normalizeEmDashPost(result.entry, true) : null
-  if (post && result.entry) post.seo = getSeoMeta(result.entry, { siteTitle: 'KK Trip 旅誌', siteUrl: 'https://news.kktrip.app', path: `/posts/${encodeURIComponent(slug)}` })
+  if (post && result.entry) post.seo = getSeoMeta(result.entry, { siteTitle: 'KK Trip 旅誌', siteUrl: 'https://news.kktrip.app', path: localePath(`/posts/${encodeURIComponent(slug)}`, locale) })
   return post
 }
 

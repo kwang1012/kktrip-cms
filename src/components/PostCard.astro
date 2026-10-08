@@ -1,9 +1,11 @@
 ---
+import { localePath } from '../lib/locales'
 import Cover from './Cover.astro'
 import Avatar from './Avatar.astro'
 import type { Post } from '../lib/post-types'
 import { formatDate, readingMinutes } from '../lib/format'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
 interface Props {
   post: Post
@@ -13,7 +15,7 @@ const { post } = Astro.props
 ---
 
 <article class="group">
-  <a href={`/posts/${post.slug}`} class="block">
+  <a href={localePath(`/posts/${post.slug}`, post.locale || Astro.currentLocale)} class="block">
     <Cover post={post} />
     {post.tags[0] && <p class="mt-4 text-xs text-text-sub">{post.tags[0]}</p>}
     {post.categories?.length ? <p class="mt-3 text-xs text-accent-deep">{post.categories.map(term => term.label).join(' · ')}</p> : null}
@@ -26,7 +28,7 @@ const { post } = Astro.props
       <span class="min-w-0 truncate">
         {post.author && <span class="font-medium text-text">{post.author}</span>}
         {post.author && <span aria-hidden="true"> · </span>}
-        <time datetime={post.publishedAt.toISOString()}>{formatDate(post.publishedAt)}</time>
+        <time datetime={post.publishedAt.toISOString()}>{formatDate(post.publishedAt, post.locale || Astro.currentLocale)}</time>
         <span aria-hidden="true"> · </span>{t.readMin(readingMinutes(post.contentHtml))}
       </span>
     </div>

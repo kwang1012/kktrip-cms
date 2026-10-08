@@ -1,6 +1,7 @@
 ---
 import type { TocItem } from '../lib/toc'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
 interface Props {
   items: TocItem[]

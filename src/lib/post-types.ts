@@ -1,5 +1,6 @@
 export interface Post {
   id: string
+  locale?: string
   slug: string
   title: string
   excerpt: string

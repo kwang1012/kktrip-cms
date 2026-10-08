@@ -1,7 +1,8 @@
 ---
 import PostCard from './PostCard.astro'
 import type { Post } from '../lib/post-types'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
 interface Props {
   posts: Post[]

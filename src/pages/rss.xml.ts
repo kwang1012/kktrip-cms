@@ -1,19 +1,22 @@
 import type { APIContext } from 'astro'
 import { escapeXml } from '../lib/format'
 import { CACHE_CONTROL, loadPosts } from '../lib/load'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+import { siteLocale, localePath } from '../lib/locales'
 
-export async function GET({ site }: APIContext) {
+export async function GET({ site, currentLocale }: APIContext) {
+  const locale = siteLocale(currentLocale)
+  const t = getStrings(locale)
   const base = (site ?? new URL('https://news.kktrip.app')).origin
-  const { posts, failed } = await loadPosts()
+  const { posts, failed } = await loadPosts(locale)
   if (failed) return new Response(t.loadError, { status: 503 })
 
   const items = posts
     .map(
       (p) => `    <item>
       <title>${escapeXml(p.title)}</title>
-      <link>${base}/posts/${encodeURIComponent(p.slug)}</link>
-      <guid isPermaLink="true">${base}/posts/${encodeURIComponent(p.slug)}</guid>
+      <link>${base}${localePath(`/posts/${encodeURIComponent(p.slug)}`, p.locale || locale)}</link>
+      <guid isPermaLink="true">${base}${localePath(`/posts/${encodeURIComponent(p.slug)}`, p.locale || locale)}</guid>
       <pubDate>${p.publishedAt.toUTCString()}</pubDate>
       <description>${escapeXml(p.excerpt)}</description>
     </item>`,
@@ -26,7 +29,7 @@ export async function GET({ site }: APIContext) {
     <title>${escapeXml(t.siteName)}</title>
     <link>${base}</link>
     <description>${escapeXml(t.siteTagline)}</description>
-    <language>zh-TW</language>
+    <language>${locale}</language>
 ${items}
   </channel>
 </rss>`

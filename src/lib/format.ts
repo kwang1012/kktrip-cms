@@ -1,5 +1,5 @@
-export function formatDate(date: Date): string {
-  return date.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })
+export function formatDate(date: Date, locale = 'zh-TW'): string {
+  return date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 /** Rough reading time in minutes: ~400 CJK chars or ~220 words per minute. */

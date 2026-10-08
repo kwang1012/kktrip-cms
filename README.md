@@ -128,3 +128,18 @@ Every submission, including signed-in users, awaits approval in **Admin → Comm
 Only approved comments appear publicly; email addresses remain private. The pnpm
 patch in `patches/` bounds the byline dialog form and uses a compact avatar preview.
 Recheck this patch when upgrading EmDash admin.
+
+## Content languages
+
+Traditional Chinese (`zh-TW`) is the default and keeps existing URLs. English,
+Japanese and Korean use `/en/`, `/ja/` and `/ko/`. EmDash's native Translations
+panel creates linked drafts with independent publication status; saving a
+translation does not publish it. The site only lists published entries in the
+requested language. Article lookups may fall back to Traditional Chinese.
+The language menu on articles only links published siblings; the site menu
+links all four language homepages. EmDashHead supplies translation hreflang.
+
+The audited legacy content locale relabel is
+`migrations/20261007_content_locales.sql`. It preserves article IDs, paths,
+bodies, revisions and status, including the paid-features draft. Record a D1
+Time Travel bookmark before applying it to the linked CMS D1 database.

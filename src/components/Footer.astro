@@ -3,7 +3,7 @@ import AppStoreBadge from './AppStoreBadge.astro'
 import CmsMenu from './CmsMenu.astro'
 import CmsWidgets from './CmsWidgets.astro'
 import { navigation } from '../lib/chrome'
-const items = await navigation('footer')
+const items = await navigation('footer', Astro.currentLocale)
 ---
 <footer class="mt-20 border-t border-border bg-card/40 sm:mt-28">
   <div class="mx-auto max-w-360 px-4 py-10 sm:px-6 sm:py-12 lg:px-8">

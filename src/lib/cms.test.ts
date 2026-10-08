@@ -19,9 +19,19 @@ it('propagates CMS failures instead of showing an empty blog', async () => {
 it('allows a draft only when EmDash returns it through its authenticated entry query', async () => {
   api.getEmDashEntry.mockResolvedValue({ entry: { id: 'preview', data: { title: 'Preview', status: 'draft', content: [] } } })
   expect((await getPost('preview'))?.title).toBe('Preview')
-  expect(api.getEmDashEntry).toHaveBeenCalledWith('posts', 'preview')
+  expect(api.getEmDashEntry).toHaveBeenCalledWith('posts', 'preview', { locale: 'zh-TW' })
 })
 it('keeps missing or inaccessible entries absent', async () => {
   api.getEmDashEntry.mockResolvedValue({ entry: undefined })
   expect(await getPost('private')).toBeNull()
+})
+
+it('queries the requested locale and builds a prefixed canonical', async () => {
+  api.getEmDashCollection.mockResolvedValue({ entries: [] })
+  await getPosts('ja')
+  expect(api.getEmDashCollection).toHaveBeenCalledWith('posts', expect.objectContaining({ locale: 'ja' }))
+  api.getEmDashEntry.mockResolvedValue({ entry: entry('hello') })
+  await getPost('hello', 'en')
+  expect(api.getEmDashEntry).toHaveBeenCalledWith('posts', 'hello', { locale: 'en' })
+  expect(api.getSeoMeta).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ path: '/en/posts/hello' }))
 })

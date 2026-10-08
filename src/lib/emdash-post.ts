@@ -59,7 +59,7 @@ export function normalizeEmDashPost(entry: { id: string; data: object }, allowPr
   const bylines = credits(data.bylines)
   const created = toDate(data.createdAt, new Date(0))
   return {
-    id: string(data.id) || entry.id, slug: entry.id, title,
+    id: string(data.id) || entry.id, slug: string(data.slug) || entry.id, locale: string(data.locale), title,
     excerpt: string(data.excerpt), contentHtml: contentHtml(data.content),
     contentBlocks: Array.isArray(data.content) ? data.content.filter((block): block is { _type: string; [key: string]: unknown } => !!block && typeof block === 'object' && typeof block._type === 'string') : [],
     credits: bylines, tagTerms, categories: terms(taxonomy?.category),

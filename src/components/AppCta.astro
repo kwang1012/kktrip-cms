@@ -1,6 +1,7 @@
 ---
 import AppStoreBadge from './AppStoreBadge.astro'
-import { t } from '../lib/strings'
+import { getStrings } from '../lib/strings'
+const t = getStrings(Astro.currentLocale)
 ---
 
 <aside class="rounded-2xl border border-border bg-card p-6 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">

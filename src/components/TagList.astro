@@ -1,4 +1,5 @@
 ---
+import { localePath } from '../lib/locales'
 import { tagHref, type TermLink } from '../lib/editorial'
 interface Props {
   tags: string[]
@@ -19,14 +20,14 @@ const off = 'border-border-strong text-text-sub hover:border-text hover:text-tex
     <ul class="flex flex-wrap gap-2">
       {allLabel && (
         <li>
-          <a href="/" class:list={[chip, active === undefined ? on : off]}>
+          <a href={localePath('/', Astro.currentLocale)} class:list={[chip, active === undefined ? on : off]}>
             {allLabel}
           </a>
         </li>
       )}
       {tags.map((tag) => (
         <li>
-          <a href={tagHref(tag, terms)} class:list={[chip, tag === active ? on : off]}>
+          <a href={localePath(tagHref(tag, terms), Astro.currentLocale)} class:list={[chip, tag === active ? on : off]}>
             {tag}
           </a>
         </li>

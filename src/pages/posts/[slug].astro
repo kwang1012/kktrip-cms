@@ -1,13 +1,15 @@
 ---
+import { siteLocale } from '../../lib/locales'
 import Layout from '../../layouts/Layout.astro'
 import ArticleView from '../../components/ArticleView.astro'
 import RelatedPosts from '../../components/RelatedPosts.astro'
 import { CACHE_CONTROL, loadPosts, loadPost } from '../../lib/load'
 import { relatedPosts } from '../../lib/related'
-import { t } from '../../lib/strings'
+import { getStrings } from '../../lib/strings'
+const t = getStrings(Astro.currentLocale)
 
 const [{ posts, failed }, { post, failed: postFailed }] = await Promise.all([
-  loadPosts(), loadPost(Astro.params.slug || ''),
+  loadPosts(siteLocale(Astro.currentLocale)), loadPost(Astro.params.slug || '', siteLocale(Astro.currentLocale)),
 ])
 
 if (failed || postFailed) {
